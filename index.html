@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M.O RESTAURI — Impresa Edile a Firenze | Costruzioni e Ristrutturazioni</title>
+<meta name="description" content="M.O Restauri: impresa edile a Firenze specializzata in costruzioni, ristrutturazioni chiavi in mano, manutenzioni, impianti e finiture. Sopralluogo gratuito.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='700' fill='%23e8291f' text-anchor='middle'%3EMO%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='700' fill='%23e8291f' text-anchor='middle'%3EMO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Open Graph / Twitter Card — og:url and og:image use relative paths for now;
+     swap in the real domain (e.g. https://www.morestauri.it/) once the site is deployed. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="M.O Restauri">
+<meta property="og:title" content="M.O RESTAURI — Impresa Edile a Firenze | Costruzioni e Ristrutturazioni">
+<meta property="og:description" content="M.O Restauri: impresa edile a Firenze specializzata in costruzioni, ristrutturazioni chiavi in mano, manutenzioni, impianti e finiture. Sopralluogo gratuito.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:url" content="/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="M.O RESTAURI — Impresa Edile a Firenze | Costruzioni e Ristrutturazioni">
+<meta name="twitter:description" content="M.O Restauri: impresa edile a Firenze specializzata in costruzioni, ristrutturazioni chiavi in mano, manutenzioni, impianti e finiture. Sopralluogo gratuito.">
+<meta name="twitter:image" content="images/hero.jpg">
+
+<!-- schema.org structured data for local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "M.O Restauri",
+  "image": "images/hero.jpg",
+  "telephone": "+39 320 757 9541",
+  "email": "restaurisrl@hotmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via di Novoli 7",
+    "addressLocality": "Firenze",
+    "postalCode": "50127",
+    "addressCountry": "IT"
+  },
+  "areaServed": "Firenze e provincia",
+  "priceRange": "€€"
+}
+</script>
+
+<!-- Google Analytics (GA4) — placeholder Measurement ID. Replace G-XXXXXXXXXX below
+     with your real ID once you create a GA4 property at analytics.google.com. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+  :root{
+    /* design tokens */
+    --color-signal-red:#e8291f;
+    --color-midnight-steel:#000000;
+    --color-industrial-white:#eeeeee;
+    --color-carbon:#333333;
+    --color-carbon-2:#3d3d3d;
+    --color-gunmetal:#4b4b4b;
+    --color-aluminum:#afafaf;
+
+    --font:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+
+    --text-micro:10px;
+    --text-caption:12px;
+    --text-body-sm:14px;
+    --text-body:16px;
+    --text-heading:24px;
+    --text-heading-lg:36px;
+    --text-display:64px;
+
+    --radius-nav:6px;
+    --radius-cards:9px;
+    --radius-images:16px;
+    --radius-buttons:6px;
+    --radius-sections:24px;
+
+    --section-gap:120px;
+    --card-padding:24px;
+    --element-gap:16px;
+
+    --max:1280px;
+
+    /* semantic aliases used throughout */
+    --bg:var(--color-midnight-steel);
+    --bg-light:var(--color-industrial-white);
+    --card:var(--color-carbon);
+    --text-on-dark:var(--color-industrial-white);
+    --text-on-dark-dim:var(--color-aluminum);
+    --text-on-light:#000000;
+    --text-on-light-dim:#555555;
+    --accent:var(--color-signal-red);
+    --on-accent:#ffffff;
+    --line:var(--color-gunmetal);
+    --line-light:rgba(0,0,0,0.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text-on-dark);
+    font-family:var(--font);
+    font-weight:400;
+    line-height:1.38;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:var(--font);
+    font-weight:300;
+    line-height:1.13;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+  section{position:relative;}
+  .eyebrow{
+    font-size:var(--text-caption);
+    font-weight:400;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    color:var(--text-on-dark-dim);
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow.on-light{color:var(--text-on-light-dim);}
+  .eyebrow::before{content:"";width:20px;height:2px;background:currentColor;display:inline-block;flex-shrink:0;opacity:0.6;}
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal-fade{opacity:0;transition:opacity .7s ease;}
+  .reveal-fade.in{opacity:1;}
+
+  /* ---------- SPLIT TEXT (words float up into view) ---------- */
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  .split-reveal .split-visible{display:inline;}
+  .sw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:0.15em;margin-bottom:-0.15em;}
+  .sw-in{display:inline-block;transform:translateY(115%);opacity:0;transition:transform .8s cubic-bezier(0.22,1,0.36,1),opacity .5s ease;}
+  .split-reveal.in .sw-in{transform:translateY(0);opacity:1;}
+
+  .band-tags .reveal:nth-child(1){transition-delay:0s;}
+  .band-tags .reveal:nth-child(2){transition-delay:.05s;}
+  .band-tags .reveal:nth-child(3){transition-delay:.1s;}
+  .band-tags .reveal:nth-child(4){transition-delay:.15s;}
+  .band-tags .reveal:nth-child(5){transition-delay:.2s;}
+  .band-tags .reveal:nth-child(6){transition-delay:.25s;}
+  .band-tags .reveal:nth-child(7){transition-delay:.3s;}
+  .band-tags .reveal:nth-child(8){transition-delay:.35s;}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important;}
+    .reveal-fade{opacity:1 !important;transition:none !important;}
+    .sw-in{transform:none !important;opacity:1 !important;transition:none !important;}
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 16px;
+    border-radius:var(--radius-buttons);
+    font-size:var(--text-body-sm);
+    font-weight:400;
+    cursor:pointer;
+    border:none;
+    transition:opacity .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--bg-light);color:#000;}
+  .btn-primary:hover{opacity:0.85;}
+  .btn-ghost{background:var(--card);color:var(--text-on-dark);}
+  .btn-ghost:hover{background:var(--color-carbon-2);}
+  .btn-ghost.on-light{background:var(--color-midnight-steel);color:var(--color-industrial-white);}
+  .btn svg{width:14px;height:14px;flex-shrink:0;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:20px 0;
+    transition:background .3s ease, padding .3s ease;
+  }
+  header.scrolled{
+    background:rgba(0,0,0,0.94);
+    padding:14px 0;
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:400;font-size:16px;letter-spacing:-0.02em;color:var(--accent);}
+  .logo .mark{
+    width:30px;height:30px;border-radius:4px;
+    background:var(--color-midnight-steel);color:var(--accent);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:400;flex-shrink:0;
+  }
+  nav.primary-nav{display:none;}
+  nav.primary-nav a{
+    font-size:var(--text-body-sm);font-weight:400;
+    color:var(--text-on-dark);
+    background:var(--card);
+    padding:5px 14px;
+    border-radius:var(--radius-nav);
+    transition:background .2s ease;
+  }
+  nav.primary-nav a:hover{background:var(--color-carbon-2);}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .nav-phone{display:flex;flex-direction:column;text-align:right;font-size:var(--text-micro);color:var(--text-on-dark-dim);}
+  .nav-phone a{color:var(--text-on-dark);font-weight:400;font-size:var(--text-body-sm);}
+  .nav-whatsapp{width:36px;height:36px;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s ease;}
+  .nav-whatsapp svg{width:18px;height:18px;fill:var(--text-on-dark);}
+  .nav-whatsapp:hover{background:var(--accent);}
+  .nav-whatsapp:hover svg{fill:#fff;}
+  .lang-switch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex-shrink:0;}
+  .lang-switch button{background:none;border:none;cursor:pointer;color:var(--text-on-dark-dim);font-family:var(--font);font-size:11px;font-weight:400;letter-spacing:0.04em;padding:8px 12px;transition:background .2s ease,color .2s ease;}
+  .lang-switch button.is-active{background:var(--accent);color:#fff;}
+  .mobile-nav .lang-switch{border-color:var(--line);margin-top:8px;}
+  .burger{display:flex;width:24px;height:18px;position:relative;cursor:pointer;flex-direction:column;justify-content:space-between;background:none;border:none;}
+  .burger span{display:block;height:1.5px;width:100%;background:var(--text-on-dark);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    position:relative;
+    padding-top:100px;
+  }
+  .scrollvid-zone{position:relative;}
+  .scrollvid-sticky{position:sticky;top:0;height:100vh;overflow:hidden;z-index:0;}
+  .scrollvid-sticky video{width:100%;height:100%;object-fit:cover;display:block;}
+  .scrollvid-sticky-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.42) 30%, rgba(0,0,0,0.58) 60%, rgba(0,0,0,0.82) 100%);
+  }
+  .scrollvid-content{position:relative;z-index:1;margin-top:-100vh;}
+  .hero-content{display:flex;justify-content:center;}
+  .hero-top{max-width:820px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .hero-top .eyebrow{margin-bottom:22px;justify-content:center;}
+  .hero h1{
+    font-size:clamp(2.1rem, 5.4vw, var(--text-display));
+    font-weight:300;
+    letter-spacing:-0.04em;
+    line-height:1.05;
+    color:var(--text-on-dark);
+    margin-bottom:24px;
+  }
+  .hero h1 em{font-style:normal;color:inherit;}
+  .hero p.lead{
+    font-size:var(--text-body);color:var(--text-on-dark-dim);max-width:560px;font-weight:400;line-height:1.55;
+    margin:0 auto;
+  }
+  .hero-cta{
+    display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+    margin-top:40px;
+  }
+  .hero-cta .btn{padding:14px 26px;font-size:var(--text-body);}
+  .hero-cta .btn svg{width:16px;height:16px;}
+  .hero-cta .ctoggle-icon{transition:transform .35s cubic-bezier(.16,1,.3,1);}
+  .hero-cta-toggle[aria-expanded="true"] .ctoggle-icon{transform:rotate(180deg);}
+
+  .hero-quickform-wrap{
+    display:grid;grid-template-rows:0fr;
+    width:100%;max-width:520px;margin:0 auto;
+    transition:grid-template-rows .5s cubic-bezier(.16,1,.3,1);
+  }
+  .hero-quickform-wrap.open{grid-template-rows:1fr;}
+  .hero-quickform{overflow:hidden;min-height:0;}
+  .hero-quickform-inner{
+    margin-top:28px;
+    text-align:left;
+    opacity:0;transform:translateY(-14px) scale(.97);
+    transition:opacity .4s ease .08s, transform .45s cubic-bezier(.16,1,.3,1) .08s;
+  }
+  .hero-quickform-wrap.open .hero-quickform-inner{opacity:1;transform:translateY(0) scale(1);}
+  .hero-quickform-success{
+    display:none;align-items:center;justify-content:center;gap:10px;
+    text-align:center;font-size:var(--text-body-sm);color:var(--text-on-dark);
+    padding:6px 0 2px;
+  }
+  .hero-quickform-success.show{display:flex;}
+  .hero-quickform-success svg{width:20px;height:20px;stroke:var(--accent);flex-shrink:0;}
+  .hero-quickform-inner.sent .hq-fields,.hero-quickform-inner.sent button[type="submit"]{display:none;}
+  #contactForm.sent .form-row,#contactForm.sent button[type="submit"]{display:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    .hero-quickform-wrap{transition:none;}
+    .hero-quickform-inner{transition:none;opacity:1;transform:none;}
+    .hero-cta .ctoggle-icon{transition:none;}
+  }
+
+  /* Product Highlight Card (reused as the stats-section CTA tile) */
+  .product-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius-cards);
+    padding:var(--card-padding);
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;
+    transition:background .2s ease;
+    height:100%;
+  }
+  .product-card:hover{background:var(--color-carbon-2);}
+  .product-card .pc-label{font-size:var(--text-body-sm);font-weight:400;color:var(--text-on-dark);line-height:1.35;}
+  .product-card .pc-sub{display:block;font-weight:400;font-size:var(--text-caption);color:var(--text-on-dark-dim);margin-top:4px;}
+  .pc-arrow{
+    width:36px;height:36px;border-radius:var(--radius-buttons);background:var(--accent);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .pc-arrow svg{width:15px;height:15px;stroke:var(--on-accent);}
+
+  /* ---------- CARD ICON + GHOST NUMBER (shared by stat-card and process-card) ---------- */
+  .stat-card, .process-card{position:relative;overflow:hidden;}
+  .card-icon{
+    border-radius:var(--radius-nav);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    position:relative;z-index:1;
+    background:var(--color-midnight-steel);
+  }
+  .ghost-num{
+    position:absolute;right:8px;top:-14px;
+    font-size:96px;font-weight:300;line-height:1;
+    color:currentColor;opacity:0.07;
+    pointer-events:none;user-select:none;z-index:0;
+  }
+
+  /* ---------- STATS (static grid, dark section, compact cards) ---------- */
+  .stats{padding:var(--section-gap) 0;background:var(--bg);}
+  .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .stats-grid .product-card{grid-column:1/-1;}
+  .stat-card{
+    border-radius:var(--radius-cards);padding:var(--card-padding);
+    display:flex;align-items:flex-end;min-height:220px;
+  }
+  .stat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .stat-card::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.88) 100%);
+  }
+  .stat-card .card-icon{position:absolute;top:20px;left:20px;z-index:1;width:42px;height:42px;background:rgba(0,0,0,0.6);}
+  .stat-card .card-icon svg{width:19px;height:19px;stroke:var(--text-on-dark);}
+  .stat-card .card-body{position:relative;z-index:1;}
+  .stat-card .card-body h4{font-size:var(--text-body);font-weight:400;margin-bottom:4px;letter-spacing:-0.02em;color:#fff;}
+  .stat-card .card-body p{font-size:var(--text-body-sm);color:rgba(255,255,255,0.75);}
+  .stats-grid .stat-card:nth-child(1){transition-delay:0s;}
+  .stats-grid .stat-card:nth-child(2){transition-delay:.08s;}
+  .stats-grid .stat-card:nth-child(3){transition-delay:.16s;}
+  .stats-grid .stat-card:nth-child(4){transition-delay:.24s;}
+
+  .reviews{margin-top:64px;}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .review-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius-cards);
+    padding:28px;display:flex;flex-direction:column;gap:16px;
+  }
+  .review-stars{color:var(--accent);font-size:16px;letter-spacing:2px;line-height:1;}
+  .review-text{color:var(--text-on-dark-dim);font-size:var(--text-body-sm);line-height:1.55;}
+  .review-author{display:flex;flex-direction:column;gap:2px;margin-top:auto;}
+  .review-name{color:#fff;font-size:var(--text-body-sm);font-weight:400;}
+  .review-role{color:var(--text-on-dark-dim);font-size:var(--text-caption);}
+  @media (max-width:900px){ .reviews-grid{grid-template-columns:1fr;} }
+
+  /* ---------- 3D CAROUSEL (Process section only) — one wide card at a time, coverflow flip on change ---------- */
+  .carousel3d{max-width:1160px;margin:0 auto;position:relative;}
+  .carousel3d-viewport{overflow:hidden;border-radius:var(--radius-sections);perspective:1400px;}
+  .carousel3d-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:48px;height:48px;border-radius:50%;
+    background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.18);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;z-index:5;color:var(--text-on-dark);
+    transition:background .2s ease,border-color .2s ease;
+  }
+  .carousel3d-arrow:hover{background:var(--accent);border-color:var(--accent);}
+  .carousel3d-arrow svg{width:20px;height:20px;stroke:currentColor;}
+  .carousel3d-arrow.prev{left:-24px;}
+  .carousel3d-arrow.next{right:-24px;}
+  @media (max-width:900px){
+    .carousel3d-arrow{width:40px;height:40px;}
+    .carousel3d-arrow.prev{left:8px;}
+    .carousel3d-arrow.next{right:8px;}
+  }
+  @media (max-width:720px){
+    .carousel3d-arrow{display:none;}
+  }
+  .carousel3d-track{display:flex;gap:0;cursor:grab;touch-action:pan-y;user-select:none;}
+  .carousel3d-track:active{cursor:grabbing;}
+  .carousel3d-track > *{flex:0 0 100%;width:100%;box-sizing:border-box;}
+  .process-card{
+    background:#fff;border:1px solid var(--line-light);border-radius:var(--radius-sections);
+    padding:56px 64px;min-height:340px;
+    display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:40px;
+  }
+  .process-card .pc-content{display:flex;flex-direction:column;gap:22px;flex:1;min-width:0;}
+  .process-card .pc-header{display:flex;align-items:center;gap:22px;position:relative;z-index:1;}
+  .process-card .pc-header .card-icon{width:64px;height:64px;}
+  .process-card .pc-header .card-icon svg{width:28px;height:28px;stroke:var(--color-industrial-white);}
+  .process-card .pc-header h4{
+    font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.1;
+    color:var(--text-on-light);
+  }
+  .process-card .pc-desc{
+    font-size:18px;line-height:1.6;color:var(--text-on-light-dim);
+    max-width:640px;position:relative;z-index:1;
+  }
+  .card-specs{display:flex;flex-wrap:wrap;gap:14px 32px;position:relative;z-index:1;}
+  .card-specs li{display:flex;align-items:center;gap:9px;font-size:var(--text-body-sm);color:var(--text-on-light);font-weight:400;}
+  .card-specs svg{width:15px;height:15px;stroke:var(--text-on-light);flex-shrink:0;}
+  .process-card .pc-visual{
+    width:180px;height:180px;border-radius:50%;flex-shrink:0;
+    background:var(--bg-light);border:1px solid var(--line-light);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .process-card .pc-visual svg{width:76px;height:76px;stroke:var(--text-on-light-dim);stroke-width:1.2;}
+  @media (max-width:900px){
+    .process-card .pc-visual{display:none;}
+  }
+
+  /* ---------- CAROUSEL PROGRESS (segmented bar, replaces dots) ---------- */
+  .carousel3d-progress{display:flex;gap:6px;margin-top:28px;}
+  .carousel3d-progress .seg{flex:1;height:3px;border-radius:2px;background:var(--line-light);border:none;padding:0;cursor:pointer;overflow:hidden;position:relative;}
+  .carousel3d-progress .seg .fill{position:absolute;inset:0;background:var(--accent);transform:scaleX(0);transform-origin:left;}
+  .carousel3d-progress .seg.done .fill{transform:scaleX(1);}
+  .carousel3d-progress .seg.active .fill{animation-name:segfill;animation-timing-function:linear;animation-fill-mode:forwards;}
+  .carousel3d-progress.paused .seg.active .fill{animation-play-state:paused;}
+  @keyframes segfill{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+  @media (prefers-reduced-motion: reduce){
+    .carousel3d-progress .seg.active .fill{animation:none;transform:scaleX(1);}
+  }
+
+  /* ---------- SPLIT ---------- */
+  .split{
+    display:grid;grid-template-columns:1fr 1.35fr;
+    max-width:var(--max);margin:0 auto;
+    border:1px solid var(--line);
+    border-radius:var(--radius-sections);
+    overflow:hidden;
+  }
+  .split-visual{position:relative;min-height:480px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;}
+  .split-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .split-visual .scrim{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 35%, rgba(0,0,0,0.85) 100%);}
+  .split-visual .content{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;justify-content:space-between;}
+  .split-brand{display:flex;align-items:center;gap:8px;font-size:var(--text-caption);font-weight:400;color:#fff;}
+  .split-brand .mark{width:22px;height:22px;border-radius:4px;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:400;}
+  .split-caption{font-size:var(--text-body-sm);color:var(--text-on-dark);max-width:220px;font-weight:400;}
+  .split-caption small{display:block;color:var(--text-on-dark-dim);font-weight:400;margin-top:6px;}
+  .split-copy{padding:52px;background:var(--card);display:flex;flex-direction:column;justify-content:center;}
+  .split-copy h3{
+    font-size:clamp(1.4rem,2.6vw,var(--text-heading-lg));
+    font-weight:300;letter-spacing:-0.04em;line-height:1.13;
+    margin-bottom:20px;color:var(--text-on-dark);
+  }
+  .split-copy p{color:var(--text-on-dark-dim);font-size:var(--text-body);font-weight:400;line-height:1.5;margin-bottom:28px;max-width:460px;}
+  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin-bottom:8px;}
+  .checklist li{display:flex;align-items:flex-start;gap:10px;font-size:var(--text-body-sm);color:var(--text-on-dark);font-weight:400;}
+  .checklist svg{width:16px;height:16px;flex-shrink:0;stroke:var(--text-on-dark);margin-top:1px;}
+
+  /* ---------- FULLBLEED ---------- */
+  .fullbleed{position:relative;min-height:78vh;display:flex;align-items:flex-end;margin-top:var(--section-gap);}
+  .fullbleed img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;}
+  .fullbleed::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.94) 100%);
+  }
+  .fullbleed .wrap{padding-bottom:70px;}
+  .fullbleed h2{
+    font-size:clamp(1.7rem,4vw,var(--text-heading-lg));font-weight:300;letter-spacing:-0.04em;line-height:1.13;
+    color:var(--text-on-dark);max-width:640px;margin-bottom:18px;
+  }
+  .fullbleed p{color:var(--text-on-dark-dim);max-width:440px;font-weight:400;font-size:var(--text-body);}
+
+  /* ---------- BAND ---------- */
+  .band{background:var(--bg);padding:90px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .band-eyebrow{margin-bottom:20px;}
+  .band-tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .band-tags span{background:var(--card);padding:6px 14px;border-radius:var(--radius-nav);font-size:var(--text-body-sm);color:var(--text-on-dark);font-weight:400;transition:background .2s ease,border-color .2s ease;border:1px solid transparent;}
+  .band-tags span:hover{border-color:var(--color-aluminum);}
+  .band-quote{position:relative;padding-left:28px;border-left:2px solid var(--line);}
+  .band-quote h3{
+    font-size:clamp(1.2rem,2.2vw,var(--text-heading));font-weight:300;letter-spacing:-0.02em;line-height:1.17;
+    color:var(--text-on-dark);
+  }
+
+  /* ---------- SERVICES (light section) ---------- */
+  .services{padding:var(--section-gap) 0;background:transparent;}
+  .services .section-head h2{color:var(--text-on-dark);}
+  .services .section-head p{color:var(--text-on-dark-dim);}
+  .stats .section-head h2{color:var(--text-on-dark);}
+  .stats .section-head p{color:var(--text-on-dark-dim);}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap;}
+  .section-head h2{
+    font-size:clamp(1.7rem,3.6vw,var(--text-heading-lg));font-weight:300;letter-spacing:-0.04em;line-height:1.13;
+    max-width:600px;color:var(--text-on-light);
+  }
+  .section-head p{color:var(--text-on-light-dim);max-width:340px;font-size:var(--text-body-sm);font-weight:400;}
+  .section-head-center{flex-direction:column;align-items:center;text-align:center;max-width:640px;margin-left:auto;margin-right:auto;}
+  .section-head-center h2{max-width:none;}
+  .section-head-center p{max-width:520px;font-size:var(--text-body);margin-top:14px;}
+  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light);border-radius:var(--radius-cards);overflow:hidden;}
+  .service-card{background:#fff;padding:var(--card-padding);min-height:200px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s ease;cursor:pointer;}
+  .service-card:hover{background:var(--bg-light);}
+  .service-card .icon{width:38px;height:38px;border-radius:var(--radius-nav);background:var(--color-midnight-steel);display:flex;align-items:center;justify-content:center;margin-bottom:24px;}
+  .service-card .icon svg{width:19px;height:19px;stroke:var(--color-industrial-white);}
+  .service-card h4{font-size:var(--text-body);font-weight:400;color:var(--text-on-light);margin-bottom:8px;letter-spacing:-0.02em;}
+  .service-card p{font-size:var(--text-body-sm);color:var(--text-on-light-dim);font-weight:400;line-height:1.5;}
+
+  /* ---------- PROCESS (over shared scroll video, carousel) ---------- */
+  .process{padding:var(--section-gap) 0;background:transparent;position:relative;}
+  .process .wrap{position:relative;z-index:1;}
+  .process .section-head h2{color:var(--text-on-dark);}
+  .process .section-head p{color:var(--text-on-dark-dim);}
+  .process .carousel3d-progress .seg{background:rgba(255,255,255,0.18);}
+  .process .carousel3d-arrow{background:rgba(0,0,0,0.7);border-color:rgba(255,255,255,0.32);}
+
+  /* ---------- CONTACT (dark section) ---------- */
+  .contact{padding:var(--section-gap) 0;background:var(--bg);}
+  .contact .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;}
+  .contact-info h2{
+    font-size:clamp(1.7rem,3.4vw,var(--text-heading-lg));font-weight:300;letter-spacing:-0.04em;line-height:1.13;
+    color:var(--text-on-dark);margin:20px 0 28px;
+  }
+  .contact-info p.lead{color:var(--text-on-dark-dim);font-weight:400;font-size:var(--text-body);margin-bottom:16px;max-width:420px;}
+  .contact-info .about-note{color:var(--text-on-dark-dim);font-weight:400;font-size:var(--text-body-sm);font-style:italic;margin-bottom:36px;max-width:420px;padding-left:14px;border-left:1px solid var(--line);}
+  .info-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line);}
+  .info-row:last-child{border-bottom:1px solid var(--line);}
+  .info-row .ic{width:36px;height:36px;border-radius:var(--radius-nav);background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .info-row .ic svg{width:17px;height:17px;stroke:var(--text-on-dark);}
+  .info-row .txt .k{font-size:var(--text-micro);color:var(--text-on-dark-dim);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;}
+  .info-row .txt a, .info-row .txt div{font-size:var(--text-body);color:var(--text-on-dark);font-weight:400;display:block;}
+  .info-row .txt a + a{margin-top:4px;}
+  .info-row .txt a:hover{color:#fff;}
+
+  .contact-map{margin-top:24px;border-radius:var(--radius-cards);overflow:hidden;border:1px solid var(--line);}
+  .contact-map iframe{display:block;filter:grayscale(0.3) invert(0.9) contrast(0.9);}
+
+  .contact-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-cards);padding:40px;}
+  .contact-form h3{font-size:var(--text-heading);font-weight:300;letter-spacing:-0.02em;color:var(--text-on-dark);margin-bottom:8px;}
+  .contact-form>p{color:var(--text-on-dark-dim);font-size:var(--text-body-sm);margin-bottom:28px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:var(--text-micro);color:var(--text-on-dark-dim);text-transform:uppercase;letter-spacing:0.04em;}
+  .field input,.field textarea,.field select{
+    background:var(--color-midnight-steel);
+    border:1px solid var(--line);
+    border-radius:var(--radius-buttons);
+    padding:12px 14px;
+    color:var(--text-on-dark);
+    font-family:var(--font);
+    font-size:var(--text-body-sm);
+    outline:none;
+    transition:border-color .2s ease;
+    resize:vertical;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--color-aluminum);}
+  .field textarea{min-height:100px;}
+  .field select{
+    appearance:none;-webkit-appearance:none;-moz-appearance:none;
+    padding-right:40px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23afafaf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    background-size:14px;
+    cursor:pointer;
+  }
+  .field select option{background:var(--color-midnight-steel);color:var(--text-on-dark);white-space:normal;}
+  .contact-form .btn{width:100%;justify-content:center;margin-top:6px;}
+  .form-note{font-size:var(--text-micro);color:var(--text-on-dark-dim);margin-top:14px;text-align:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:64px 0 28px;}
+  .footer-top{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px;}
+  .footer-brand .logo{margin-bottom:16px;}
+  .footer-brand p{color:var(--text-on-dark-dim);font-size:var(--text-body-sm);max-width:280px;font-weight:400;}
+  .footer-col h5{font-size:var(--text-caption);font-weight:400;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-on-dark-dim);margin-bottom:18px;}
+  .footer-col a,.footer-col div{display:block;font-size:var(--text-body-sm);color:var(--text-on-dark);margin-bottom:12px;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap;gap:14px;}
+  .footer-bottom p{font-size:var(--text-caption);color:var(--text-on-dark-dim);}
+  .footer-bottom a{color:var(--text-on-dark-dim);text-decoration:underline;text-underline-offset:2px;}
+  .footer-bottom a:hover{color:var(--text-on-dark);}
+
+  /* ---------- ROOM TOUR — ACCORDION GALLERY ---------- */
+  .room-tour{padding:var(--section-gap) 0;background:#000;}
+  .room-tour .section-head h2{color:var(--text-on-dark);}
+  .room-tour .section-head p{color:var(--text-on-dark-dim);}
+
+  .accordion-gallery{
+    display:flex;gap:12px;height:520px;margin-top:56px;
+    perspective:1200px;
+  }
+  .ag-panel{
+    position:relative;flex:1 1 0%;min-width:0;overflow:hidden;
+    border-radius:var(--radius-cards);cursor:pointer;outline:none;
+    transform-style:preserve-3d;background:#000;
+  }
+  .ag-panel__frame{position:absolute;inset:0;overflow:hidden;border-radius:inherit;}
+  .ag-panel__media{
+    position:absolute;top:50%;left:50%;
+    width:var(--ag-media-size,320px);height:var(--ag-media-size,320px);
+    --ag-gray:1;--ag-dim:0.35;
+  }
+  .ag-panel__media img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:grayscale(var(--ag-gray)) brightness(calc(1 - var(--ag-dim) * 0.35));
+  }
+  .ag-panel__overlay{
+    position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.85) 100%);
+  }
+  .ag-panel__label{
+    position:absolute;left:22px;right:22px;bottom:22px;z-index:2;
+    display:flex;align-items:center;gap:10px;
+  }
+  .ag-panel__bar{width:22px;height:2px;background:var(--accent);flex-shrink:0;opacity:0;transform:translateX(-14px);}
+  .ag-panel__text{font-size:var(--text-body);font-weight:300;letter-spacing:-0.01em;color:#fff;white-space:nowrap;opacity:0;transform:translateX(-14px);}
+
+  @media (max-width:720px){
+    .accordion-gallery{flex-direction:column;height:auto;gap:12px;}
+    .ag-panel{height:200px;flex:none !important;transform:none !important;}
+    .ag-panel__media{
+      --ag-gray:0 !important;--ag-dim:0 !important;
+      top:0 !important;left:0 !important;width:100% !important;height:100% !important;
+      transform:none !important;
+    }
+    .ag-panel__bar,.ag-panel__text{opacity:1 !important;transform:none !important;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ag-panel__bar,.ag-panel__text{opacity:1;transform:none;}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1024px){
+    .split{grid-template-columns:1fr;}
+    .split-visual{min-height:320px;}
+    .split-copy{padding:40px 28px;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+    .contact .wrap{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-phone{display:none;}
+    .nav-right .btn-primary{display:none;}
+    .wrap{padding:0 20px;}
+    .logo{font-size:15px;}
+    .hero{padding-top:110px;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+    .service-card{padding:16px;min-height:auto;gap:10px;}
+    .service-card .icon{width:30px;height:30px;margin-bottom:0;}
+    .service-card .icon svg{width:15px;height:15px;}
+    .service-card h4{font-size:var(--text-body-sm);margin-bottom:0;}
+    .service-card p{display:none;}
+    .stats-grid{grid-template-columns:1fr;}
+    .checklist{grid-template-columns:1fr;}
+    .ghost-num{font-size:72px;}
+    .band .wrap{grid-template-columns:1fr;gap:36px;}
+    .hero-cta{flex-direction:column;align-items:stretch;width:100%;}
+    .hero-cta .btn{justify-content:center;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;gap:32px;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-nav{
+    position:fixed;inset:0;z-index:99;
+    background:rgba(0,0,0,0.97);
+    display:flex;flex-direction:column;
+    justify-content:center;align-items:center;gap:24px;
+    opacity:0;pointer-events:none;
+    transition:opacity .3s ease;
+  }
+  .mobile-nav.open{opacity:1;pointer-events:auto;}
+  .mobile-nav a{font-size:26px;font-weight:300;letter-spacing:-0.02em;color:var(--text-on-dark);}
+  .mobile-nav a.btn-primary{color:#000;}
+  .mobile-nav .btn{margin-top:16px;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="mark">MO</span> M.O RESTAURI</a>
+    <nav class="primary-nav">
+      <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
+      <a href="#servizi" data-i18n="nav.services">Servizi edili</a>
+      <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <div class="nav-right">
+      <div class="nav-phone">
+        <span data-i18n="nav.call">Chiamaci</span>
+        <a href="tel:+393207579541">+39 320 757 9541</a>
+      </div>
+      <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a href="https://wa.me/393207579541?text=Ciao%2C%20vorrei%20richiedere%20un%20sopralluogo%20gratuito" target="_blank" rel="noopener" class="nav-whatsapp" data-i18n-aria-label="nav.whatsapp_aria" aria-label="Scrivici su WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+      </a>
+      <a href="#contatti" class="btn btn-primary">
+        <span data-i18n="nav.cta">Richiedi info</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      <button class="burger" id="burger" data-i18n-aria-label="nav.burger_aria" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
+  <a href="#servizi" data-i18n="nav.services">Servizi edili</a>
+  <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+  <a href="#contatti" class="btn btn-primary" data-i18n="nav.cta_mobile">Richiesta sopralluogo</a>
+  <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+</div>
+
+<main id="top">
+
+  <!-- HERO + COME LAVORIAMO share one scroll-scrubbed video background -->
+  <div class="scrollvid-zone" id="scrollVidZone">
+    <div class="scrollvid-sticky">
+      <video id="scrollVideo" muted playsinline webkit-playsinline preload="auto" poster="images/hero.jpg">
+        <source src="videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="scrollvid-sticky-overlay"></div>
+    </div>
+    <div class="scrollvid-content">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-content">
+      <div class="hero-top">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Impresa edile · Firenze e provincia</p>
+        <h1 class="split-reveal split-immediate"><span data-i18n="hero.title.part1">Dalla progettazione alla consegna, il tuo </span><em data-i18n="hero.title.em">partner ideale</em><span data-i18n="hero.title.part2"> per costruire e ristrutturare</span></h1>
+        <p class="lead" data-i18n="hero.lead">Realizzazione, ristrutturazione e manutenzione di edifici civili e industriali. Seguiamo ogni progetto dal primo sopralluogo alla consegna finale, garantendo qualità, sicurezza e rispetto dei tempi.</p>
+        <div class="hero-cta">
+          <button type="button" class="btn btn-primary hero-cta-toggle" id="heroCtaToggle" aria-expanded="false" aria-controls="heroQuickform">
+            <span data-i18n="form.title">Richiedi un sopralluogo gratuito</span>
+            <svg class="ctoggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <a href="#servizi" class="btn btn-ghost" data-i18n="hero.cta.services">Scopri i servizi</a>
+        </div>
+        <div class="hero-quickform-wrap" id="heroQuickformWrap">
+          <div class="hero-quickform">
+            <form id="heroQuickForm" class="hero-quickform-inner contact-form" novalidate>
+                <h3 data-i18n="form.title">Richiedi un sopralluogo gratuito</h3>
+                <p data-i18n="form.subtitle">Ti rispondiamo entro 48 ore con la prima disponibilità.</p>
+                <div class="hq-fields">
+                  <div class="form-row">
+                    <div class="field"><label for="hq-nome" data-i18n="form.name">Nome e cognome</label><input id="hq-nome" name="nome" type="text" autocomplete="name" data-i18n-placeholder="form.name.placeholder" placeholder="Mario Rossi" required></div>
+                    <div class="field"><label for="hq-tel" data-i18n="form.phone">Telefono</label><input id="hq-tel" name="tel" type="tel" autocomplete="tel" data-i18n-placeholder="form.phone.placeholder" placeholder="+39 3xx xxx xxxx" required></div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field full"><label for="hq-email" data-i18n="form.email">Email</label><input id="hq-email" name="email" type="email" autocomplete="email" data-i18n-placeholder="form.email.placeholder" placeholder="tuamail@esempio.it" required></div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field full"><label for="hq-servizio" data-i18n="form.service">Servizio richiesto</label>
+                      <select id="hq-servizio" name="servizio">
+                        <option data-i18n="form.service.opt1">Ristrutturazione chiavi in mano</option>
+                        <option data-i18n="form.service.opt2">Nuova costruzione</option>
+                        <option data-i18n="form.service.opt3">Manutenzione</option>
+                        <option data-i18n="form.service.opt4">Impianti</option>
+                        <option data-i18n="form.service.opt5">Finiture / Pavimenti / Cartongesso</option>
+                        <option data-i18n="form.service.opt6">Altro</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="field full"><label for="hq-msg" data-i18n="form.message">Messaggio</label><textarea id="hq-msg" name="msg" data-i18n-placeholder="form.message.placeholder" placeholder="Raccontaci il tuo progetto..."></textarea></div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><span data-i18n="form.submit">Invia richiesta</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                </button>
+                <p class="form-note"><span data-i18n="form.note.pre">Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra</span> <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a>.</p>
+                <p class="hero-quickform-success" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span data-i18n="form.success">Si aprirà il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
+                </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="processo">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:44px;">
+        <h2 class="split-reveal" data-i18n="process.title">Come lavoriamo</h2>
+        <p data-i18n="process.subtitle">Un percorso chiaro in quattro fasi, con un solo interlocutore dall'inizio alla fine.</p>
+      </div>
+      <div class="carousel3d reveal-fade" data-carousel data-autoplay="5000">
+        <div class="carousel3d-viewport">
+          <div class="carousel3d-track">
+            <div class="process-card">
+              <div class="pc-content">
+                <div class="pc-header">
+                  <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                  <h4 data-i18n="process.1.title">Sopralluogo gratuito</h4>
+                </div>
+                <p class="pc-desc" data-i18n="process.1.desc">Analizziamo lo stato dell'immobile e le tue esigenze, senza impegno e senza costi.</p>
+                <ul class="card-specs">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.1.spec1">Fissato entro 48 ore</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.1.spec2">Nessun costo o obbligo</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.1.spec3">Report fotografico incluso</span></li>
+                </ul>
+              </div>
+              <div class="pc-visual" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div>
+            </div>
+            <div class="process-card">
+              <div class="pc-content">
+                <div class="pc-header">
+                  <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
+                  <h4 data-i18n="process.2.title">Progetto e preventivo</h4>
+                </div>
+                <p class="pc-desc" data-i18n="process.2.desc">Definiamo lavorazioni, materiali, tempi e costi in un preventivo dettagliato e trasparente.</p>
+                <ul class="card-specs">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.2.spec1">Preventivo voce per voce</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.2.spec2">Tempistiche chiare</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.2.spec3">Materiali e finiture proposti</span></li>
+                </ul>
+              </div>
+              <div class="pc-visual" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg></div>
+            </div>
+            <div class="process-card">
+              <div class="pc-content">
+                <div class="pc-header">
+                  <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94z"/></svg></div>
+                  <h4 data-i18n="process.3.title">Cantiere</h4>
+                </div>
+                <p class="pc-desc" data-i18n="process.3.desc">Squadra qualificata, aggiornamenti costanti e rispetto della sicurezza in ogni fase.</p>
+                <ul class="card-specs">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.3.spec1">Squadra qualificata e assicurata</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.3.spec2">Aggiornamenti settimanali</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.3.spec3">Sicurezza a norma</span></li>
+                </ul>
+              </div>
+              <div class="pc-visual" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94z"/></svg></div>
+            </div>
+            <div class="process-card">
+              <div class="pc-content">
+                <div class="pc-header">
+                  <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><path d="M10.5 11.5L21 1M15 7l3 3M18 4l3 3"/></svg></div>
+                  <h4 data-i18n="process.4.title">Consegna chiavi in mano</h4>
+                </div>
+                <p class="pc-desc" data-i18n="process.4.desc">Verifica finale e consegna nei tempi concordati: la tua casa, pronta da vivere.</p>
+                <ul class="card-specs">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.4.spec1">Verifica finale con te</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.4.spec2">Pulizia post-cantiere inclusa</span></li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="process.4.spec3">Garanzia sui lavori</span></li>
+                </ul>
+              </div>
+              <div class="pc-visual" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><path d="M10.5 11.5L21 1M15 7l3 3M18 4l3 3"/></svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel3d-progress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servizi">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="split-reveal" data-i18n="services.title">Servizi edili a Firenze: costruzioni e ristrutturazioni</h2>
+        <p data-i18n="services.subtitle">Dalla nuova costruzione alla rifinitura più piccola, gestiamo ogni fase del cantiere con un unico interlocutore.</p>
+      </div>
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+          <div><h4 data-i18n="services.1.title">Ristrutturazioni chiavi in mano</h4><p data-i18n="services.1.desc">Gestiamo l'intero progetto, dalla demolizione alla consegna finale, senza pensieri per te.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13M4 21h16M9 21v-8h6v8"/></svg></div>
+          <div><h4 data-i18n="services.2.title">Nuove costruzioni</h4><p data-i18n="services.2.desc">Edifici civili e industriali realizzati dalle fondamenta alla consegna chiavi in mano.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9c.14.36.22.75.22 1.15V10.85"/></svg></div>
+          <div><h4 data-i18n="services.3.title">Manutenzioni e ristrutturazioni</h4><p data-i18n="services.3.desc">Interventi mirati per mantenere e rinnovare edifici esistenti nel tempo.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></div>
+          <div><h4 data-i18n="services.4.title">Installazione impianti</h4><p data-i18n="services.4.desc">Impianti elettrici, idraulici e di climatizzazione a norma e certificati.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+          <div><h4 data-i18n="services.5.title">Finiture edili</h4><p data-i18n="services.5.desc">Rifiniture curate nei minimi dettagli per un risultato impeccabile.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l9-9M21 3l-4.5 1.5L15 9l3-3 3 1.5L21 3zM3 21l1.5-4.5L9 15l-3 3-1.5-3L3 21z"/></svg></div>
+          <div><h4 data-i18n="services.6.title">Imbiancatura</h4><p data-i18n="services.6.desc">Tinteggiature interne ed esterne con prodotti di qualità e finiture durature.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+          <div><h4 data-i18n="services.7.title">Cartongesso</h4><p data-i18n="services.7.desc">Controsoffitti, pareti divisorie e soluzioni su misura in cartongesso.</p></div>
+        </div>
+
+        <div class="service-card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+          <div><h4 data-i18n="services.8.title">Pavimenti e Parquet</h4><p data-i18n="services.8.desc">Posa di pavimenti e parquet di pregio, per interni residenziali e commerciali.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </div>
+
+  <!-- ROOM TOUR -->
+  <section class="room-tour" id="roomTour">
+    <div class="wrap">
+      <div class="section-head section-head-center">
+        <h2 class="split-reveal" data-i18n="roomtour.title">Tour degli interni</h2>
+        <p data-i18n="roomtour.subtitle">Ogni ambiente della casa, raccontato con la stessa cura nei dettagli.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="accordion-gallery" id="roomAccordion" role="list" data-i18n-aria-label="roomtour.aria" aria-label="Tour degli interni">
+        <div class="ag-panel" data-index="0" role="listitem" tabindex="0" data-i18n-aria-label="roomtour.room1" aria-label="Soggiorno">
+          <span class="ag-panel__frame">
+            <span class="ag-panel__media">
+              <img loading="lazy" src="images/soggiorno.jpg" alt="Soggiorno ristrutturato da M.O Restauri" draggable="false">
+            </span>
+            <span class="ag-panel__overlay" aria-hidden="true"></span>
+          </span>
+          <span class="ag-panel__label" aria-hidden="true">
+            <span class="ag-panel__bar"></span>
+            <span class="ag-panel__text" data-i18n="roomtour.room1">Soggiorno</span>
+          </span>
+        </div>
+        <div class="ag-panel" data-index="1" role="listitem" tabindex="0" data-i18n-aria-label="roomtour.room2" aria-label="Cucina">
+          <span class="ag-panel__frame">
+            <span class="ag-panel__media">
+              <img loading="lazy" src="images/cucina.jpg" alt="Cucina ristrutturata da M.O Restauri" draggable="false">
+            </span>
+            <span class="ag-panel__overlay" aria-hidden="true"></span>
+          </span>
+          <span class="ag-panel__label" aria-hidden="true">
+            <span class="ag-panel__bar"></span>
+            <span class="ag-panel__text" data-i18n="roomtour.room2">Cucina</span>
+          </span>
+        </div>
+        <div class="ag-panel" data-index="2" role="listitem" tabindex="0" data-i18n-aria-label="roomtour.room3" aria-label="Camera da letto">
+          <span class="ag-panel__frame">
+            <span class="ag-panel__media">
+              <img loading="lazy" src="images/camera.jpg" alt="Camera da letto ristrutturata da M.O Restauri" draggable="false">
+            </span>
+            <span class="ag-panel__overlay" aria-hidden="true"></span>
+          </span>
+          <span class="ag-panel__label" aria-hidden="true">
+            <span class="ag-panel__bar"></span>
+            <span class="ag-panel__text" data-i18n="roomtour.room3">Camera da letto</span>
+          </span>
+        </div>
+        <div class="ag-panel" data-index="3" role="listitem" tabindex="0" data-i18n-aria-label="roomtour.room4" aria-label="Bagno">
+          <span class="ag-panel__frame">
+            <span class="ag-panel__media">
+              <img loading="lazy" src="images/bagno.jpg" alt="Bagno ristrutturato da M.O Restauri" draggable="false">
+            </span>
+            <span class="ag-panel__overlay" aria-hidden="true"></span>
+          </span>
+          <span class="ag-panel__label" aria-hidden="true">
+            <span class="ag-panel__bar"></span>
+            <span class="ag-panel__text" data-i18n="roomtour.room4">Bagno</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT -->
+  <section class="wrap" style="padding-top:var(--section-gap);">
+    <div class="split">
+      <div class="split-visual">
+        <img loading="lazy" src="images/casa.jpg" alt="Casa ristrutturata da M.O Restauri">
+        <div class="scrim"></div>
+        <div class="content">
+          <div class="split-brand"><span class="mark">MO</span> M.O Restauri</div>
+          <div class="split-caption"><span data-i18n="split.caption">Finiture e interni curati nel dettaglio</span><small>Via di Novoli 7 — Firenze (FI)</small></div>
+        </div>
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow" style="margin-bottom:16px;" data-i18n="split.eyebrow">Servizio su misura</p>
+        <h3 class="split-reveal" data-i18n="split.heading">Sopralluogo gratuito. Ci occupiamo di tutto il processo per te</h3>
+        <p data-i18n="split.body">Dal primo incontro alla consegna delle chiavi: il nostro team ti guida su cosa serve, quali lavorazioni prevedere e in che ordine intervenire, per un cantiere senza sorprese.</p>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="split.check1">Preventivo chiaro e rapido</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="split.check2">Materiali di alta qualità</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="split.check3">Rispetto dei tempi</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="split.check4">Squadra qualificata</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULLBLEED -->
+  <section class="fullbleed">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=2000&q=80" alt="Villa moderna, progettazione architettonica M.O Restauri">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:18px;" data-i18n="fullbleed.eyebrow">Progettazione &amp; architettura</p>
+      <h2 class="split-reveal" data-i18n="fullbleed.title">Attenzione ai dettagli architettonici, dal progetto alla rifinitura</h2>
+      <p data-i18n="fullbleed.body">Ti accompagniamo in ogni fase: progettazione, costruzione, posa di pavimenti, serramenti, impianti e rifiniture, con tecniche all'avanguardia e materiali durevoli nel tempo.</p>
+    </div>
+  </section>
+
+  <!-- BAND -->
+  <section class="band">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow band-eyebrow" data-i18n="band.eyebrow">Cosa facciamo</p>
+        <div class="band-tags">
+          <span class="reveal" data-i18n="band.tag1">Costruzioni</span>
+          <span class="reveal" data-i18n="band.tag2">Ristrutturazioni</span>
+          <span class="reveal" data-i18n="band.tag3">Manutenzioni</span>
+          <span class="reveal" data-i18n="band.tag4">Impianti</span>
+          <span class="reveal" data-i18n="band.tag5">Finiture</span>
+          <span class="reveal" data-i18n="band.tag6">Pavimenti &amp; Parquet</span>
+          <span class="reveal" data-i18n="band.tag7">Cartongesso</span>
+          <span class="reveal" data-i18n="band.tag8">Imbiancature</span>
+        </div>
+      </div>
+      <div class="band-quote reveal">
+        <h3 class="split-reveal" data-i18n="band.quote">Un partner serio e affidabile: standard sempre alti, tecniche all'avanguardia e materiali di prima qualità per risultati eccellenti e duraturi.</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="section-head section-head-center">
+        <h2 class="split-reveal" data-i18n="stats.title">Perché scegliere M.O Restauri</h2>
+        <p class="split-reveal" data-i18n="stats.subtitle">Quattro buoni motivi per affidarti a noi, dal primo sopralluogo alla consegna.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <img loading="lazy" src="images/muro-illuminazione.jpg" alt="Muro in pietra con illuminazione integrata realizzato da M.O Restauri">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+          <div class="card-body">
+            <h4 data-i18n="stats.1.title">Esperienza e competenza</h4>
+            <p data-i18n="stats.1.desc">Squadra qualificata</p>
+          </div>
+        </div>
+        <div class="stat-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1585595751864-6e56dbd53658?auto=format&fit=crop&w=900&q=80" alt="Skyline di Firenze con la Cattedrale di Santa Maria del Fiore">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="card-body">
+            <h4 data-i18n="stats.2.title">Firenze e provincia</h4>
+            <p data-i18n="stats.2.desc">Privati e aziende</p>
+          </div>
+        </div>
+        <div class="stat-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Progettazione tecnica M.O Restauri">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="card-body">
+            <h4 data-i18n="stats.3.title">Progettazione → consegna</h4>
+            <p data-i18n="stats.3.desc">Un solo interlocutore</p>
+          </div>
+        </div>
+        <div class="stat-card reveal">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1599600540907-62e9b06e6597?auto=format&fit=crop&w=900&q=80" alt="Lastra di marmo pregiato usata nei progetti M.O Restauri">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="card-body">
+            <h4 data-i18n="stats.4.title">Materiali di alta qualità</h4>
+            <p data-i18n="stats.4.desc">Tecniche all'avanguardia</p>
+          </div>
+        </div>
+        <a href="#contatti" class="product-card reveal">
+          <span class="pc-label"><span data-i18n="stats.cta.label">Richiedi un sopralluogo</span><span class="pc-sub" data-i18n="stats.cta.sub">gratuito e senza impegno</span></span>
+          <span class="pc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
+        </a>
+      </div>
+
+      <div class="reviews">
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.1.text">"Ristrutturazione completa dell'appartamento gestita in ogni fase senza sorprese. Tempi rispettati e finiture di qualità."</p>
+            <div class="review-author">
+              <span class="review-name">Marco B.</span>
+              <span class="review-role">Firenze</span>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.2.text">"Squadra seria e disponibile dal primo sopralluogo. Preventivo chiaro e nessun costo nascosto lungo il cantiere."</p>
+            <div class="review-author">
+              <span class="review-name">Giulia F.</span>
+              <span class="review-role">Scandicci</span>
+            </div>
+          </div>
+          <div class="review-card reveal">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text" data-i18n="reviews.3.text">"Ottimo rapporto qualità-prezzo, materiali validi e comunicazione costante durante tutti i lavori."</p>
+            <div class="review-author">
+              <span class="review-name">Alessandro T.</span>
+              <span class="review-role">Sesto Fiorentino</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contatti">
+    <div class="wrap">
+      <div class="contact-info">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contatti</p>
+        <h2 class="split-reveal" data-i18n="contact.title">Vuoi trasformare la tua casa?</h2>
+        <p class="lead" data-i18n="contact.lead">Contattaci per un sopralluogo gratuito e un preventivo su misura per il tuo progetto a Firenze e provincia.</p>
+        <p class="about-note" data-i18n="contact.note">Un partner serio e affidabile: standard sempre alti e tecniche all'avanguardia, dal primo sopralluogo alla consegna delle chiavi.</p>
+
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.address">Sede</div><div>Via di Novoli 7 — 50127 Firenze (FI)</div></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.phone">Telefono</div><a href="tel:+393207579541">+39 320 757 9541</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.whatsapp">WhatsApp</div><a href="https://wa.me/393207579541?text=Ciao%2C%20vorrei%20richiedere%20un%20sopralluogo%20gratuito" target="_blank" rel="noopener">+39 320 757 9541</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.email">Email</div><a href="mailto:restaurisrl@hotmail.com">restaurisrl@hotmail.com</a></div>
+        </div>
+
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=Via+di+Novoli+7,+50127+Firenze+FI&output=embed" width="100%" height="220" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="contact.map.title" title="Sede M.O Restauri su Google Maps"></iframe>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h3 data-i18n="form.title">Richiedi un sopralluogo gratuito</h3>
+        <p data-i18n="form.subtitle">Ti rispondiamo entro 48 ore con la prima disponibilità.</p>
+        <div class="form-row">
+          <div class="field"><label for="nome" data-i18n="form.name">Nome e cognome</label><input id="nome" name="nome" type="text" data-i18n-placeholder="form.name.placeholder" placeholder="Mario Rossi" required></div>
+          <div class="field"><label for="tel" data-i18n="form.phone">Telefono</label><input id="tel" name="tel" type="tel" data-i18n-placeholder="form.phone.placeholder" placeholder="+39 3xx xxx xxxx" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="email" data-i18n="form.email">Email</label><input id="email" name="email" type="email" data-i18n-placeholder="form.email.placeholder" placeholder="tuamail@esempio.it" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="servizio" data-i18n="form.service">Servizio richiesto</label>
+            <select id="servizio" name="servizio">
+              <option data-i18n="form.service.opt1">Ristrutturazione chiavi in mano</option>
+              <option data-i18n="form.service.opt2">Nuova costruzione</option>
+              <option data-i18n="form.service.opt3">Manutenzione</option>
+              <option data-i18n="form.service.opt4">Impianti</option>
+              <option data-i18n="form.service.opt5">Finiture / Pavimenti / Cartongesso</option>
+              <option data-i18n="form.service.opt6">Altro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="msg" data-i18n="form.message">Messaggio</label><textarea id="msg" name="msg" data-i18n-placeholder="form.message.placeholder" placeholder="Raccontaci il tuo progetto..."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary"><span data-i18n="form.submit">Invia richiesta</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </button>
+        <p class="form-note"><span data-i18n="form.note.pre">Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra</span> <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a>.</p>
+        <p class="hero-quickform-success" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="form.success">Si aprirà il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="mark">MO</span> M.O RESTAURI</a>
+        <p data-i18n="footer.about">Impresa edile a Firenze specializzata in costruzioni, ristrutturazioni e manutenzioni per privati e aziende.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.services.heading">Servizi</h5>
+        <a href="#servizi" data-i18n="footer.services.1">Ristrutturazioni</a>
+        <a href="#servizi" data-i18n="footer.services.2">Nuove costruzioni</a>
+        <a href="#servizi" data-i18n="footer.services.3">Impianti</a>
+        <a href="#servizi" data-i18n="footer.services.4">Pavimenti &amp; Parquet</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.company.heading">Azienda</h5>
+        <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
+        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.contact.heading">Contatti</h5>
+        <div>Via di Novoli 7 — Firenze</div>
+        <a href="tel:+393207579541">+39 320 757 9541</a>
+        <a href="mailto:restaurisrl@hotmail.com">restaurisrl@hotmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 M.O Restauri — Ovidiu Manole. <span data-i18n="footer.rights">Tutti i diritti riservati.</span> · <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a></p>
+      <p>P.IVA 07334540486 · Firenze, Italia</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="i18n.js"></script>
+<script>
+  initI18N();
+
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+  function buildMailtoLink(form) {
+    const data = new FormData(form);
+    const get = (key) => (data.get(key) || '').toString().trim();
+    const nome = get('nome');
+    const subject = `Richiesta sopralluogo dal sito — ${nome || 'nuovo contatto'}`;
+    const body = [
+      `Nome: ${nome}`,
+      `Telefono: ${get('tel')}`,
+      `Email: ${get('email')}`,
+      `Servizio richiesto: ${get('servizio')}`,
+      '',
+      'Messaggio:',
+      get('msg')
+    ].join('\n');
+    return `mailto:restaurisrl@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = buildMailtoLink(this);
+    contactForm.classList.add('sent');
+    contactForm.querySelector('.hero-quickform-success').classList.add('show');
+  });
+
+  const heroCtaToggle = document.getElementById('heroCtaToggle');
+  const heroQuickformWrap = document.getElementById('heroQuickformWrap');
+  const heroQuickForm = document.getElementById('heroQuickForm');
+  heroCtaToggle.addEventListener('click', () => {
+    const open = heroQuickformWrap.classList.toggle('open');
+    heroCtaToggle.setAttribute('aria-expanded', String(open));
+    if (open) {
+      window.setTimeout(() => document.getElementById('hq-nome').focus(), 350);
+    }
+  });
+  heroQuickForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = buildMailtoLink(this);
+    heroQuickForm.classList.add('sent');
+    heroQuickForm.querySelector('.hero-quickform-success').classList.add('show');
+  });
+</script>
+
+<script type="module">
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- SCROLL-SCRUBBED HERO/PROCESS VIDEO ---------- */
+  (function scrollScrubVideo(){
+    const zone = document.getElementById('scrollVidZone');
+    const video = document.getElementById('scrollVideo');
+    if (!zone || !video) return;
+
+    if (reduceMotion) { video.pause(); return; } // keep the poster frame, no scroll-driven playback
+
+    video.muted = true;
+    video.pause();
+
+    let duration = 0;
+    let targetTime = 0;
+    let renderedTime = 0;
+    let ready = false;
+
+    function onReady(){
+      if (ready) return;
+      ready = true;
+      duration = video.duration || 0;
+      updateTarget();
+      video.currentTime = targetTime; // paint the correct frame immediately, don't wait for the lerp
+      renderedTime = targetTime;
+    }
+    // 'loadeddata' guarantees a decodable frame is available; more reliable than
+    // 'loadedmetadata' alone for making sure the very first seek actually paints.
+    video.addEventListener('loadeddata', onReady);
+    if (video.readyState >= 2) onReady(); // already loaded (e.g. from bfcache / fast reload)
+
+    let queued = false;
+    function updateTarget(){
+      queued = false;
+      const rect = zone.getBoundingClientRect();
+      const scrollable = zone.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const progress = scrollable > 0 ? Math.min(1, Math.max(0, scrolled / scrollable)) : 0;
+      targetTime = duration ? progress * duration : 0;
+    }
+    function onScroll(){
+      if (!queued) { queued = true; requestAnimationFrame(updateTarget); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+
+    function raf(){
+      if (duration && Math.abs(targetTime - renderedTime) > 0.004) {
+        renderedTime += (targetTime - renderedTime) * 0.2;
+        video.currentTime = renderedTime;
+      }
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    updateTarget();
+  })();
+
+  /* ---------- SCROLL REVEAL (band tags/quote, carousel wrappers, room cards) ---------- */
+  (function scrollReveal(){
+    const els = document.querySelectorAll('.reveal, .reveal-fade');
+    if (!els.length) return;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(el => io.observe(el));
+  })();
+
+  /* ---------- SPLIT TEXT (words float up on scroll into view) ---------- */
+  (function splitTextReveal(){
+    const targets = document.querySelectorAll('.split-reveal');
+    if (!targets.length) return;
+    if (reduceMotion) return; // leave plain, readable text — no split needed
+
+    function splitWords(container) {
+      const plainText = container.textContent;
+      const frag = document.createDocumentFragment();
+      let wordIndex = 0;
+
+      function walk(sourceNode, targetNode) {
+        sourceNode.childNodes.forEach((child) => {
+          if (child.nodeType === Node.TEXT_NODE) {
+            const parts = child.textContent.split(/(\s+)/);
+            parts.forEach((part) => {
+              if (part === '') return;
+              if (/^\s+$/.test(part)) {
+                targetNode.appendChild(document.createTextNode(part));
+                return;
+              }
+              const outer = document.createElement('span');
+              outer.className = 'sw';
+              const inner = document.createElement('span');
+              inner.className = 'sw-in';
+              inner.textContent = part;
+              inner.style.transitionDelay = (Math.min(wordIndex, 16) * 45) + 'ms';
+              wordIndex++;
+              outer.appendChild(inner);
+              targetNode.appendChild(outer);
+            });
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            const clone = child.cloneNode(false);
+            targetNode.appendChild(clone);
+            walk(child, clone);
+          }
+        });
+      }
+      walk(container, frag);
+
+      const visible = document.createElement('span');
+      visible.className = 'split-visible';
+      visible.setAttribute('aria-hidden', 'true');
+      visible.appendChild(frag);
+
+      const srOnly = document.createElement('span');
+      srOnly.className = 'sr-only';
+      srOnly.textContent = plainText;
+
+      container.textContent = '';
+      container.appendChild(visible);
+      container.appendChild(srOnly);
+    }
+
+    targets.forEach((el) => splitWords(el));
+
+    const immediate = document.querySelectorAll('.split-immediate');
+    requestAnimationFrame(() => {
+      immediate.forEach((el) => el.classList.add('in'));
+    });
+
+    const scrollTargets = Array.from(targets).filter((el) => !el.classList.contains('split-immediate'));
+    if (scrollTargets.length && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      scrollTargets.forEach((el) => io.observe(el));
+    } else {
+      scrollTargets.forEach((el) => el.classList.add('in'));
+    }
+  })();
+
+  /* ---------- ACCORDION GALLERY (Tour degli interni) ---------- */
+  (function accordionGallery(){
+    const root = document.getElementById('roomAccordion');
+    if (!root || typeof gsap === 'undefined') return;
+    // No width-based bail-out here on purpose: the mobile stylesheet (≤720px) already
+    // neutralizes every inline style GSAP sets (flex, transform, opacity) via !important,
+    // so it's safe to just let this run everywhere and let CSS own the mobile layout.
+
+    const panels = Array.from(root.querySelectorAll('.ag-panel'));
+    if (!panels.length) return;
+
+    const expandRatio = 0.52;
+    const tilt = 8;
+    const parallax = 0.5;
+    const duration = 0.6;
+    const ease = 'power3.out';
+    const stagger = 0.06;
+
+    let active = Math.min(2, panels.length - 1);
+    let mediaSize = 320;
+
+    function measure() {
+      const rect = root.getBoundingClientRect();
+      const gap = 12;
+      const usable = Math.max(rect.width - gap * (panels.length - 1), 120);
+      mediaSize = Math.max(140, usable * expandRatio * 1.22);
+      root.style.setProperty('--ag-media-size', `${mediaSize}px`);
+    }
+
+    function applyLayout(animate) {
+      const r = expandRatio;
+      const grow = panels.length > 1 ? (r * (panels.length - 1)) / (1 - r) : 1;
+      const dur = animate && !reduceMotion ? duration : 0;
+      const tl = gsap.timeline();
+
+      panels.forEach((panel, i) => {
+        const isActive = i === active;
+        const media = panel.querySelector('.ag-panel__media');
+        const bar = panel.querySelector('.ag-panel__bar');
+        const text = panel.querySelector('.ag-panel__text');
+        const rot = isActive ? 0 : i < active ? tilt : -tilt;
+
+        tl.to(panel, { flexGrow: isActive ? grow : 1, rotateY: rot, duration: dur, ease }, 0);
+        panel.classList.toggle('ag-panel--active', isActive);
+        panel.setAttribute('aria-current', isActive ? 'true' : 'false');
+
+        if (media) {
+          const drift = Math.max(-1.5, Math.min(1.5, active - i));
+          const shift = drift * parallax * mediaSize * 0.06;
+          tl.to(media, {
+            xPercent: -50, yPercent: -50,
+            x: isActive ? 0 : shift, y: 0,
+            '--ag-gray': isActive ? 0 : 1,
+            '--ag-dim': isActive ? 0 : 0.35,
+            duration: dur, ease
+          }, 0);
+        }
+
+        if (bar && text) {
+          if (isActive) {
+            tl.to([bar, text], { opacity: 1, x: 0, duration: dur, ease, stagger: reduceMotion ? 0 : stagger }, 0);
+          } else {
+            tl.to([bar, text], { opacity: 0, x: -14, duration: dur * 0.6, ease }, 0);
+          }
+        }
+      });
+    }
+
+    function setActive(i) {
+      if (i === active) return;
+      active = i;
+      applyLayout(true);
+    }
+
+    panels.forEach((panel, i) => {
+      panel.addEventListener('mouseenter', () => setActive(i));
+      panel.addEventListener('focus', () => setActive(i));
+      panel.addEventListener('click', () => setActive(i));
+      panel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = (i + 1) % panels.length;
+          setActive(next);
+          panels[next].focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = (i - 1 + panels.length) % panels.length;
+          setActive(prev);
+          panels[prev].focus();
+        }
+      });
+    });
+
+    measure();
+    applyLayout(false);
+
+    const ro = new ResizeObserver(() => { measure(); applyLayout(false); });
+    ro.observe(root);
+  })();
+
+  /* ---------- 3D CAROUSEL ----------
+     Drag/swipe track with a per-card rotateY tilt based on distance from
+     center, inspired by the classic "coverflow" pattern. Vanilla reimplementation
+     (no React/Framer Motion) so it drops into this static page with zero deps. */
+  class Carousel3D {
+    constructor(root) {
+      this.root = root;
+      this.track = root.querySelector('.carousel3d-track');
+      this.items = Array.from(this.track.children);
+      this.progressWrap = root.querySelector('.carousel3d-progress');
+      this.index = 0;
+      this.x = 0;
+      this.dragging = false;
+      this.dragged = false;
+      this.startX = 0;
+      this.startTx = 0;
+      this.reduceMotion = reduceMotion;
+      this.autoDelay = Number(root.dataset.autoplay) || 0;
+
+      this.buildProgress();
+      this.buildArrows();
+      this.bindDrag();
+      this.bindHover();
+      window.addEventListener('resize', () => this.measure());
+
+      this.measure();
+      this.goTo(0, false);
+      if (this.autoDelay && !this.reduceMotion) this.startAuto();
+    }
+    buildProgress() {
+      this.segs = this.items.map((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'seg';
+        b.setAttribute('aria-label', 'Vai a elemento ' + (i + 1));
+        const fill = document.createElement('span');
+        fill.className = 'fill';
+        b.appendChild(fill);
+        b.addEventListener('click', () => { this.goTo(i); this.restartAuto(); });
+        this.progressWrap.appendChild(b);
+        return b;
+      });
+    }
+    buildArrows() {
+      const makeArrow = (dir, label, d) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'carousel3d-arrow ' + dir;
+        b.setAttribute('aria-label', label);
+        b.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+        b.addEventListener('click', () => {
+          const next = dir === 'next'
+            ? (this.index >= this.maxIndex ? 0 : this.index + 1)
+            : (this.index <= 0 ? this.maxIndex : this.index - 1);
+          this.goTo(next);
+          this.restartAuto();
+        });
+        this.root.appendChild(b);
+        return b;
+      };
+      makeArrow('prev', 'Elemento precedente', 'M15 18l-6-6 6-6');
+      makeArrow('next', 'Elemento successivo', 'M9 18l6-6-6-6');
+    }
+    measure() {
+      const first = this.items[0];
+      const gap = parseFloat(getComputedStyle(this.track).gap) || 0;
+      this.itemWidth = first.offsetWidth + gap;
+      this.maxIndex = this.items.length - 1;
+      this.goTo(this.index, false);
+    }
+    centerOffset() {
+      const displayWidth = this.items[0].offsetWidth;
+      return (this.root.clientWidth - displayWidth) / 2;
+    }
+    goTo(i, animate = true) {
+      this.index = Math.max(0, Math.min(i, this.maxIndex));
+      this.x = this.centerOffset() - this.index * this.itemWidth;
+      this.track.style.transition = animate ? 'transform .55s cubic-bezier(0.22,1,0.36,1)' : 'none';
+      this.track.style.transform = `translateX(${this.x}px)`;
+      this.segs.forEach((seg, si) => {
+        seg.classList.remove('done', 'active');
+        const fill = seg.querySelector('.fill');
+        fill.style.animation = 'none';
+        if (si < this.index) {
+          seg.classList.add('done');
+        } else if (si === this.index) {
+          seg.classList.add('active');
+          fill.style.animationDuration = (this.autoDelay || 600) + 'ms';
+          void fill.offsetWidth; // restart the fill animation from 0
+          fill.style.animation = '';
+        }
+      });
+      this.tilt();
+    }
+    tilt() {
+      if (this.reduceMotion) return;
+      const viewportCenter = this.root.clientWidth / 2;
+      this.items.forEach((item, i) => {
+        const displayWidth = item.offsetWidth;
+        const itemViewportCenter = this.x + i * this.itemWidth + displayWidth / 2;
+        const delta = (itemViewportCenter - viewportCenter) / this.itemWidth;
+        const rotate = Math.max(-70, Math.min(70, delta * -70));
+        item.style.transform = `perspective(1200px) rotateY(${rotate}deg)`;
+      });
+    }
+    bindDrag() {
+      const onDown = (e) => {
+        this.dragging = true;
+        this.dragged = false;
+        this.pauseAuto();
+        this.startX = e.touches ? e.touches[0].clientX : e.clientX;
+        this.startTx = this.x;
+        this.track.style.transition = 'none';
+      };
+      const onMove = (e) => {
+        if (!this.dragging) return;
+        const cx = e.touches ? e.touches[0].clientX : e.clientX;
+        const delta = cx - this.startX;
+        if (Math.abs(delta) > 6) this.dragged = true;
+        this.x = this.startTx + delta;
+        this.track.style.transform = `translateX(${this.x}px)`;
+        this.tilt();
+      };
+      const onUp = (e) => {
+        if (!this.dragging) return;
+        this.dragging = false;
+        const cx = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+        const delta = cx - this.startX;
+        let next = this.index;
+        if (delta < -40) next = this.index + 1;
+        else if (delta > 40) next = this.index - 1;
+        this.goTo(next);
+        this.restartAuto();
+      };
+      this.track.addEventListener('pointerdown', onDown);
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', onUp);
+      this.track.addEventListener('click', (e) => {
+        if (this.dragged) { e.preventDefault(); e.stopPropagation(); this.dragged = false; }
+      }, true);
+    }
+    bindHover() {
+      this.root.addEventListener('mouseenter', () => this.pauseAuto());
+      this.root.addEventListener('mouseleave', () => this.restartAuto());
+    }
+    startAuto() {
+      this.timer = setInterval(() => {
+        this.goTo(this.index >= this.maxIndex ? 0 : this.index + 1);
+      }, this.autoDelay);
+    }
+    pauseAuto() { clearInterval(this.timer); this.progressWrap.classList.add('paused'); }
+    restartAuto() {
+      this.pauseAuto();
+      this.progressWrap.classList.remove('paused');
+      if (this.autoDelay && !this.reduceMotion) this.startAuto();
+    }
+  }
+  document.querySelectorAll('[data-carousel]').forEach(el => new Carousel3D(el));
+</script>
+
+</body>
+</html>

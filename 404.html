@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagina non trovata — M.O RESTAURI</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='700' fill='%23e8291f' text-anchor='middle'%3EMO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-signal-red:#e8291f;
+    --color-midnight-steel:#000000;
+    --color-industrial-white:#eeeeee;
+    --color-carbon:#333333;
+    --color-gunmetal:#4b4b4b;
+    --color-aluminum:#afafaf;
+    --font:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --text-micro:10px;--text-caption:12px;--text-body-sm:14px;--text-body:16px;--text-heading-lg:36px;
+    --radius-buttons:6px;
+    --bg:var(--color-midnight-steel);
+    --card:var(--color-carbon);
+    --text-on-dark:var(--color-industrial-white);
+    --text-on-dark-dim:var(--color-aluminum);
+    --accent:var(--color-signal-red);
+    --line:var(--color-gunmetal);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text-on-dark);font-family:var(--font);font-weight:400;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px;}
+  header{padding:24px 0;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:400;font-size:16px;letter-spacing:-0.02em;color:var(--accent);}
+  .logo .mark{width:30px;height:30px;border-radius:4px;background:var(--color-midnight-steel);color:var(--accent);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:400;flex-shrink:0;}
+  .lang-switch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;}
+  .lang-switch button{background:none;border:none;cursor:pointer;color:var(--text-on-dark-dim);font-family:var(--font);font-size:11px;font-weight:400;letter-spacing:0.04em;padding:8px 12px;transition:background .2s ease,color .2s ease;}
+  .lang-switch button.is-active{background:var(--accent);color:#fff;}
+  main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;}
+  .code{font-size:22vw;line-height:0.9;font-weight:300;color:var(--card);letter-spacing:-0.04em;}
+  @media (min-width:640px){.code{font-size:160px;}}
+  h1{font-size:var(--text-heading-lg);font-weight:300;letter-spacing:-0.02em;margin:8px 0 12px;}
+  p{color:var(--text-on-dark-dim);font-size:var(--text-body);margin-bottom:32px;max-width:420px;margin-left:auto;margin-right:auto;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--bg-light,var(--color-industrial-white));color:#000;font-size:var(--text-body-sm);font-weight:400;padding:14px 26px;border-radius:var(--radius-buttons);transition:opacity .2s ease;}
+  .btn-primary:hover{opacity:0.85;}
+  footer{padding:24px 0;text-align:center;font-size:var(--text-caption);color:var(--text-on-dark-dim);}
+  @media (max-width:420px){.logo{font-size:13px;gap:8px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
+    <a href="index.html" class="logo"><span class="mark">MO</span> M.O RESTAURI</a>
+    <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+  </div>
+</header>
+
+<main>
+  <div>
+    <div class="code">404</div>
+    <h1 data-i18n="404.title">Pagina non trovata</h1>
+    <p data-i18n="404.body">La pagina che cerchi non esiste o è stata spostata.</p>
+    <a href="index.html" class="btn-primary" data-i18n="404.cta">Torna alla home</a>
+  </div>
+</main>
+
+<footer>© 2026 M.O Restauri</footer>
+
+<script src="i18n.js"></script>
+<script>initI18N();</script>
+</body>
+</html>
