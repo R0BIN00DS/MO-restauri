@@ -3,9 +3,10 @@
 Single-file marketing site for a Florence-based construction/renovation company. No build step, no framework — one static `index.html` with embedded `<style>` and two `<script>` blocks (one plain, one `type="module"`).
 
 - **Entry point:** [index.html](index.html) (~1700 lines)
-- **Other pages:** [privacy.html](privacy.html) — standalone Privacy Policy page, same design tokens, linked from the footer and from both forms' helper text. **Italian-only** — not part of the i18n system below (matches the same precedent already set in `lungarno-estate-demo`'s own `privacy.html`).
+- **Other pages:** [privacy.html](privacy.html) — standalone Privacy Policy page, same design tokens, linked from the footer and from both forms' helper text. **Italian-only** — not part of the i18n system below (matches the same precedent already set in `lungarno-estate-demo`'s own `privacy.html`). [404.html](404.html) — custom error page, minimal header (logo + lang-switch) + centered message, **is** wired into the i18n system (`404.title`/`404.body`/`404.cta` keys). A file literally named `404.html` at the project root is auto-served as the error page by GitHub Pages/Netlify/Vercel with no extra config.
 - **[i18n.js](i18n.js)** — the Italian/English translation dictionary + engine. See "Bilingual site (IT/EN)" below.
 - **Assets:** [images/](images/), [videos/hero.mp4](videos/hero.mp4)
+- **Git:** this project is a git repo, pushed to **https://github.com/R0BIN00DS/MO-restauri** (public). `.gitignore` excludes `.DS_Store` and `videos/hero_original_backup.mp4` (the pre-compression backup video — kept locally only, never needed in the repo). No CI/deploy pipeline configured yet — the repo is just source control for now.
 - **SEO/crawl files:** [robots.txt](robots.txt), [sitemap.xml](sitemap.xml) — both reference a **placeholder domain** (`https://www.morestauri.it/`), swap it for the real deployed domain before/at launch.
 - Ignore [design.md](design.md) — it's leftover boilerplate from an unrelated design-system template (ON.energy / yellow-on-black), not this site's actual tokens.
 - **External dependencies:**
