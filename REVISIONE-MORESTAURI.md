@@ -79,7 +79,18 @@ Comportamento al submit — sostituire il singolo `mailto:` con una **scelta tra
 
 ---
 
-## FASE 4 — Trattini lunghi e refusi
+## FASE 4 — Layout del form: campo Telefono tagliato
+
+Nel form della hero, il campo "Telefono" esce dal bordo destro della card: probabilmente è affiancato a "Nome e cognome" in una griglia a due colonne che non si adatta bene a questa larghezza.
+
+- Verificare la larghezza della card del form rispetto ai due campi affiancati a questa risoluzione.
+- Se il problema è strutturale a questa larghezza, mettere Nome e cognome e Telefono ciascuno su una riga propria, a piena larghezza della card (come già sono Email, Servizio richiesto e Messaggio).
+- Verificare che lo stesso problema non si presenti nel form duplicato in fondo alla home (rimosso al punto 3.2) né, una volta creato, nel form della pagina Contatti.
+- Controllare anche a 1440x900, 1280x800 e su mobile 390x844.
+
+---
+
+## FASE 5 — Trattini lunghi e refusi
 
 - Rimuovere gli em dash da: `<title>`, indirizzo in footer e sezione contatti (`Via di Novoli 7 — Firenze`), copyright.
 - Correggere il refuso "Richiedi un sopralluogogratuito e senza impegno" (manca lo spazio) nella card CTA di "Perché scegliere M.O Restauri".
@@ -87,21 +98,21 @@ Comportamento al submit — sostituire il singolo `mailto:` con una **scelta tra
 
 ---
 
-## FASE 5 — Contenuti duplicati e ridondanti
+## FASE 6 — Contenuti duplicati e ridondanti
 
 - La frase "Un partner serio e affidabile: standard sempre alti..." compare due volte in punti diversi della pagina, quasi identica. Riformulare una delle due occorrenze o rimuoverne una.
 - "Ristrutturazioni chiavi in mano" e "Manutenzioni e ristrutturazioni" tra i servizi si sovrappongono concettualmente. Valutare se distinguerle meglio nel testo o accorparle.
 
 ---
 
-## FASE 6 — Open Graph e SEO tecnica
+## FASE 7 — Open Graph e SEO tecnica
 
 - `og:image` e `og:url` usano percorsi relativi (`images/hero.jpg`, `/`). Sostituire con URL assoluti (`https://mo-restauri.vercel.app/images/hero.jpg`, `https://mo-restauri.vercel.app/`), così le anteprime funzionano quando il link viene condiviso su WhatsApp o social.
 - Aggiungere dati strutturati **LocalBusiness** (schema.org) con nome, indirizzo, telefono, orari e area servita, per la ricerca locale.
 
 ---
 
-## FASE 7 — Immagini
+## FASE 8 — Immagini
 
 - Le immagini stock Unsplash (villa moderna, skyline di Firenze, lastra di marmo) sono caricate in hotlink dal dominio Unsplash. Scaricarle, convertirle in WebP, e servirle dal sito con `loading="lazy"` oltre la prima schermata.
 - Valutare la sostituzione delle immagini più genericamente stock con foto reali dei cantieri, dove disponibili: per un'impresa edile sono l'argomento di vendita più forte.
@@ -109,7 +120,7 @@ Comportamento al submit — sostituire il singolo `mailto:` con una **scelta tra
 
 ---
 
-## FASE 8 (opzionale) — Recensioni
+## FASE 9 (opzionale) — Recensioni
 
 Le tre recensioni (Marco B., Giulia F., Alessandro T.) non hanno foto né iniziali. Se si vuole seguire lo stesso trattamento di Lungarno Estate: avatar con iniziali su fondo colore brand.
 
@@ -124,6 +135,7 @@ Le tre recensioni (Marco B., Giulia F., Alessandro T.) non hanno foto né inizia
 - [ ] Pagina Contatti dedicata creata, form spostato lì con scelta WhatsApp/email al submit
 - [ ] Form hero: stessi campi, submit ora offre scelta WhatsApp/Email
 - [ ] Tutti i link "Contatti" aggiornati salvo il form hero
+- [ ] Campo Telefono non più tagliato, verificato su tutte le risoluzioni
 - [ ] Nessun trattino lungo residuo
 - [ ] Refuso "sopralluogogratuito" corretto
 - [ ] Nessuna frase duplicata
