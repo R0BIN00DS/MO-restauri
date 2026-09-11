@@ -285,8 +285,7 @@
   }
   .hero-quickform-success.show{display:flex;}
   .hero-quickform-success svg{width:20px;height:20px;stroke:var(--accent);flex-shrink:0;}
-  .hero-quickform-inner.sent .hq-fields,.hero-quickform-inner.sent button[type="submit"]{display:none;}
-  #contactForm.sent .form-row,#contactForm.sent button[type="submit"]{display:none;}
+  .contact-form.sent .form-row,.contact-form.sent .form-actions{display:none;}
 
   @media (prefers-reduced-motion: reduce){
     .hero-quickform-wrap{transition:none;}
@@ -520,7 +519,7 @@
 
   /* ---------- CONTACT (dark section) ---------- */
   .contact{padding:var(--section-gap) 0;background:var(--bg);}
-  .contact .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;}
+  .contact .wrap{display:grid;grid-template-columns:1fr;gap:70px;}
   .contact-info h2{
     font-size:clamp(1.7rem,3.4vw,var(--text-heading-lg));font-weight:300;letter-spacing:-0.04em;line-height:1.13;
     color:var(--text-on-dark);margin:20px 0 28px;
@@ -572,6 +571,8 @@
   }
   .field select option{background:var(--color-midnight-steel);color:var(--text-on-dark);white-space:normal;}
   .contact-form .btn{width:100%;justify-content:center;margin-top:6px;}
+  .form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+  .form-actions .btn{flex:1 1 200px;width:auto;}
   .form-note{font-size:var(--text-micro);color:var(--text-on-dark-dim);margin-top:14px;text-align:center;}
 
   /* ---------- FOOTER ---------- */
@@ -690,7 +691,7 @@
     <nav class="primary-nav">
       <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
       <a href="#servizi" data-i18n="nav.services">Servizi edili</a>
-      <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+      <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
     </nav>
     <div class="nav-right">
       <div class="nav-phone">
@@ -701,7 +702,7 @@
       <a href="https://wa.me/393207579541?text=Ciao%2C%20vorrei%20richiedere%20un%20sopralluogo%20gratuito" target="_blank" rel="noopener" class="nav-whatsapp" data-i18n-aria-label="nav.whatsapp_aria" aria-label="Scrivici su WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
       </a>
-      <a href="#contatti" class="btn btn-primary">
+      <a href="contatti.html" class="btn btn-primary">
         <span data-i18n="nav.cta">Richiedi info</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
       </a>
@@ -715,8 +716,8 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
   <a href="#servizi" data-i18n="nav.services">Servizi edili</a>
-  <a href="#contatti" data-i18n="nav.contact">Contatti</a>
-  <a href="#contatti" class="btn btn-primary" data-i18n="nav.cta_mobile">Richiesta sopralluogo</a>
+  <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
+  <a href="contatti.html" class="btn btn-primary" data-i18n="nav.cta_mobile">Richiesta sopralluogo</a>
   <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
 </div>
 
@@ -775,13 +776,18 @@
                     <div class="field full"><label for="hq-msg" data-i18n="form.message">Messaggio</label><textarea id="hq-msg" name="msg" data-i18n-placeholder="form.message.placeholder" placeholder="Raccontaci il tuo progetto..."></textarea></div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary"><span data-i18n="form.submit">Invia richiesta</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-                </button>
+                <div class="form-actions">
+                  <button type="button" class="btn btn-primary" data-channel="whatsapp"><span data-i18n="form.submit.whatsapp">Invia su WhatsApp</span>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+                  </button>
+                  <button type="button" class="btn btn-ghost" data-channel="email"><span data-i18n="form.submit.email">Invia via email</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                  </button>
+                </div>
                 <p class="form-note"><span data-i18n="form.note.pre">Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra</span> <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a>.</p>
                 <p class="hero-quickform-success" aria-live="polite">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                  <span data-i18n="form.success">Si aprirà il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
+                  <span data-i18n="form.success">Si aprirà WhatsApp o il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
                 </p>
             </form>
           </div>
@@ -1082,7 +1088,7 @@
             <p data-i18n="stats.4.desc">Tecniche all'avanguardia</p>
           </div>
         </div>
-        <a href="#contatti" class="product-card reveal">
+        <a href="contatti.html" class="product-card reveal">
           <span class="pc-label"><span data-i18n="stats.cta.label">Richiedi un sopralluogo</span> <span class="pc-sub" data-i18n="stats.cta.sub">gratuito e senza impegno</span></span>
           <span class="pc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </a>
@@ -1148,42 +1154,12 @@
         <div class="contact-map">
           <iframe src="https://www.google.com/maps?q=Via+di+Novoli+7,+50127+Firenze+FI&output=embed" width="100%" height="220" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="contact.map.title" title="Sede M.O Restauri su Google Maps"></iframe>
         </div>
-      </div>
 
-      <form class="contact-form" id="contactForm">
-        <h3 data-i18n="form.title">Richiedi un sopralluogo gratuito</h3>
-        <p data-i18n="form.subtitle">Ti rispondiamo entro 48 ore con la prima disponibilità.</p>
-        <div class="form-row">
-          <div class="field full"><label for="nome" data-i18n="form.name">Nome e cognome</label><input id="nome" name="nome" type="text" data-i18n-placeholder="form.name.placeholder" placeholder="Mario Rossi" required></div>
-          <div class="field full"><label for="tel" data-i18n="form.phone">Telefono</label><input id="tel" name="tel" type="tel" data-i18n-placeholder="form.phone.placeholder" placeholder="+39 3xx xxx xxxx" required></div>
-        </div>
-        <div class="form-row">
-          <div class="field full"><label for="email" data-i18n="form.email">Email</label><input id="email" name="email" type="email" data-i18n-placeholder="form.email.placeholder" placeholder="tuamail@esempio.it" required></div>
-        </div>
-        <div class="form-row">
-          <div class="field full"><label for="servizio" data-i18n="form.service">Servizio richiesto</label>
-            <select id="servizio" name="servizio">
-              <option data-i18n="form.service.opt1">Ristrutturazione chiavi in mano</option>
-              <option data-i18n="form.service.opt2">Nuova costruzione</option>
-              <option data-i18n="form.service.opt3">Manutenzione</option>
-              <option data-i18n="form.service.opt4">Impianti</option>
-              <option data-i18n="form.service.opt5">Finiture / Pavimenti / Cartongesso</option>
-              <option data-i18n="form.service.opt6">Altro</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field full"><label for="msg" data-i18n="form.message">Messaggio</label><textarea id="msg" name="msg" data-i18n-placeholder="form.message.placeholder" placeholder="Raccontaci il tuo progetto..."></textarea></div>
-        </div>
-        <button type="submit" class="btn btn-primary"><span data-i18n="form.submit">Invia richiesta</span>
+        <a href="contatti.html" class="btn btn-primary" style="margin-top:28px;">
+          <span data-i18n="contact.home.cta">Vai alla pagina Contatti</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </button>
-        <p class="form-note"><span data-i18n="form.note.pre">Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra</span> <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a>.</p>
-        <p class="hero-quickform-success" aria-live="polite">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span data-i18n="form.success">Si aprirà il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
-        </p>
-      </form>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1206,7 +1182,7 @@
       <div class="footer-col">
         <h5 data-i18n="footer.company.heading">Azienda</h5>
         <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
-        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+        <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
       </div>
       <div class="footer-col">
         <h5 data-i18n="footer.contact.heading">Contatti</h5>
@@ -1254,13 +1230,41 @@
     return `mailto:restaurisrl@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    window.location.href = buildMailtoLink(this);
-    contactForm.classList.add('sent');
-    contactForm.querySelector('.hero-quickform-success').classList.add('show');
-  });
+  function buildWhatsAppLink(form) {
+    const data = new FormData(form);
+    const get = (key) => (data.get(key) || '').toString().trim();
+    const lines = [
+      'Richiesta sopralluogo dal sito',
+      '',
+      `Nome: ${get('nome')}`,
+      `Telefono: ${get('tel')}`,
+      `Email: ${get('email')}`,
+      `Servizio richiesto: ${get('servizio')}`,
+      '',
+      'Messaggio:',
+      get('msg')
+    ].join('\n');
+    return `https://wa.me/393207579541?text=${encodeURIComponent(lines)}`;
+  }
+
+  function wireContactForm(form) {
+    form.querySelectorAll('[data-channel]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const channel = btn.getAttribute('data-channel');
+        if (channel === 'whatsapp') {
+          window.open(buildWhatsAppLink(form), '_blank', 'noopener');
+        } else {
+          window.location.href = buildMailtoLink(form);
+        }
+        form.classList.add('sent');
+        form.querySelector('.hero-quickform-success').classList.add('show');
+      });
+    });
+  }
 
   const heroCtaToggle = document.getElementById('heroCtaToggle');
   const heroQuickformWrap = document.getElementById('heroQuickformWrap');
@@ -1272,12 +1276,7 @@
       window.setTimeout(() => document.getElementById('hq-nome').focus(), 350);
     }
   });
-  heroQuickForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    window.location.href = buildMailtoLink(this);
-    heroQuickForm.classList.add('sent');
-    heroQuickForm.querySelector('.hero-quickform-success').classList.add('show');
-  });
+  wireContactForm(heroQuickForm);
 </script>
 
 <script type="module">

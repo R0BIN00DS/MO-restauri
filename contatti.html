@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatti · M.O RESTAURI</title>
+<meta name="description" content="Contatta M.O Restauri per un sopralluogo gratuito: sede, telefono, WhatsApp, email e form di richiesta per il tuo progetto a Firenze e provincia.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='700' fill='%23e8291f' text-anchor='middle'%3EMO%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='24' font-weight='700' fill='%23e8291f' text-anchor='middle'%3EMO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="M.O Restauri">
+<meta property="og:title" content="Contatti · M.O RESTAURI">
+<meta property="og:description" content="Contatta M.O Restauri per un sopralluogo gratuito: sede, telefono, WhatsApp, email e form di richiesta per il tuo progetto a Firenze e provincia.">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:url" content="/contatti.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contatti · M.O RESTAURI">
+<meta name="twitter:description" content="Contatta M.O Restauri per un sopralluogo gratuito: sede, telefono, WhatsApp, email e form di richiesta per il tuo progetto a Firenze e provincia.">
+<meta name="twitter:image" content="images/hero.jpg">
+
+<!-- Google Analytics (GA4) — placeholder Measurement ID, vedi index.html -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+  :root{
+    --color-signal-red:#e8291f;
+    --color-midnight-steel:#000000;
+    --color-industrial-white:#eeeeee;
+    --color-carbon:#333333;
+    --color-carbon-2:#3d3d3d;
+    --color-gunmetal:#4b4b4b;
+    --color-aluminum:#afafaf;
+
+    --font:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+
+    --text-micro:10px;
+    --text-caption:12px;
+    --text-body-sm:14px;
+    --text-body:16px;
+    --text-heading:24px;
+    --text-heading-lg:36px;
+
+    --radius-nav:6px;
+    --radius-cards:9px;
+    --radius-buttons:6px;
+
+    --section-gap:120px;
+
+    --max:1280px;
+
+    --bg:var(--color-midnight-steel);
+    --bg-light:var(--color-industrial-white);
+    --card:var(--color-carbon);
+    --text-on-dark:var(--color-industrial-white);
+    --text-on-dark-dim:var(--color-aluminum);
+    --accent:var(--color-signal-red);
+    --on-accent:#ffffff;
+    --line:var(--color-gunmetal);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  #contatti{scroll-margin-top:96px;}
+  body{
+    background:var(--bg);
+    color:var(--text-on-dark);
+    font-family:var(--font);
+    font-weight:400;
+    line-height:1.38;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:var(--font);font-weight:300;line-height:1.13;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+  section{position:relative;}
+  .eyebrow{
+    font-size:var(--text-caption);font-weight:400;letter-spacing:0.02em;text-transform:uppercase;
+    color:var(--text-on-dark-dim);display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:20px;height:2px;background:currentColor;display:inline-block;flex-shrink:0;opacity:0.6;}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 16px;
+    border-radius:var(--radius-buttons);
+    font-size:var(--text-body-sm);
+    font-weight:400;
+    cursor:pointer;
+    border:none;
+    transition:opacity .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--bg-light);color:#000;}
+  .btn-primary:hover{opacity:0.85;}
+  .btn-ghost{background:var(--card);color:var(--text-on-dark);}
+  .btn-ghost:hover{background:var(--color-carbon-2);}
+  .btn svg{width:14px;height:14px;flex-shrink:0;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:20px 0;
+    transition:background .3s ease, padding .3s ease;
+  }
+  header.scrolled{background:rgba(0,0,0,0.94);padding:14px 0;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:400;font-size:16px;letter-spacing:-0.02em;color:var(--accent);}
+  .logo .mark{
+    width:30px;height:30px;border-radius:4px;
+    background:var(--color-midnight-steel);color:var(--accent);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:400;flex-shrink:0;
+  }
+  nav.primary-nav{display:none;}
+  nav.primary-nav a{
+    font-size:var(--text-body-sm);font-weight:400;color:var(--text-on-dark);background:var(--card);
+    padding:5px 14px;border-radius:var(--radius-nav);transition:background .2s ease;
+  }
+  nav.primary-nav a:hover{background:var(--color-carbon-2);}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .nav-phone{display:flex;flex-direction:column;text-align:right;font-size:var(--text-micro);color:var(--text-on-dark-dim);}
+  .nav-phone a{color:var(--text-on-dark);font-weight:400;font-size:var(--text-body-sm);}
+  .nav-whatsapp{width:36px;height:36px;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s ease;}
+  .nav-whatsapp svg{width:18px;height:18px;fill:var(--text-on-dark);}
+  .nav-whatsapp:hover{background:var(--accent);}
+  .nav-whatsapp:hover svg{fill:#fff;}
+  .lang-switch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex-shrink:0;}
+  .lang-switch button{background:none;border:none;cursor:pointer;color:var(--text-on-dark-dim);font-family:var(--font);font-size:11px;font-weight:400;letter-spacing:0.04em;padding:8px 12px;transition:background .2s ease,color .2s ease;}
+  .lang-switch button.is-active{background:var(--accent);color:#fff;}
+  .mobile-nav .lang-switch{border-color:var(--line);margin-top:8px;}
+  .burger{display:flex;width:24px;height:18px;position:relative;cursor:pointer;flex-direction:column;justify-content:space-between;background:none;border:none;}
+  .burger span{display:block;height:1.5px;width:100%;background:var(--text-on-dark);}
+
+  /* ---------- CONTACT ---------- */
+  main{padding-top:160px;padding-bottom:var(--section-gap);}
+  .contact .wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;}
+  .contact-info h2{
+    font-size:clamp(1.7rem,3.4vw,var(--text-heading-lg));font-weight:300;letter-spacing:-0.04em;line-height:1.13;
+    color:var(--text-on-dark);margin:20px 0 28px;
+  }
+  .contact-info p.lead{color:var(--text-on-dark-dim);font-weight:400;font-size:var(--text-body);margin-bottom:16px;max-width:420px;}
+  .contact-info .about-note{color:var(--text-on-dark-dim);font-weight:400;font-size:var(--text-body-sm);font-style:italic;margin-bottom:36px;max-width:420px;padding-left:14px;border-left:1px solid var(--line);}
+  .info-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line);}
+  .info-row:last-child{border-bottom:1px solid var(--line);}
+  .info-row .ic{width:36px;height:36px;border-radius:var(--radius-nav);background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .info-row .ic svg{width:17px;height:17px;stroke:var(--text-on-dark);}
+  .info-row .txt .k{font-size:var(--text-micro);color:var(--text-on-dark-dim);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;}
+  .info-row .txt a, .info-row .txt div{font-size:var(--text-body);color:var(--text-on-dark);font-weight:400;display:block;}
+  .info-row .txt a + a{margin-top:4px;}
+  .info-row .txt a:hover{color:#fff;}
+
+  .contact-map{margin-top:24px;border-radius:var(--radius-cards);overflow:hidden;border:1px solid var(--line);}
+  .contact-map iframe{display:block;filter:grayscale(0.3) invert(0.9) contrast(0.9);}
+
+  .contact-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-cards);padding:40px;}
+  .contact-form h3{font-size:var(--text-heading);font-weight:300;letter-spacing:-0.02em;color:var(--text-on-dark);margin-bottom:8px;}
+  .contact-form>p{color:var(--text-on-dark-dim);font-size:var(--text-body-sm);margin-bottom:28px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:var(--text-micro);color:var(--text-on-dark-dim);text-transform:uppercase;letter-spacing:0.04em;}
+  .field input,.field textarea,.field select{
+    background:var(--color-midnight-steel);
+    border:1px solid var(--line);
+    border-radius:var(--radius-buttons);
+    padding:12px 14px;
+    color:var(--text-on-dark);
+    font-family:var(--font);
+    font-size:var(--text-body-sm);
+    outline:none;
+    transition:border-color .2s ease;
+    resize:vertical;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--color-aluminum);}
+  .field textarea{min-height:100px;}
+  .field select{
+    appearance:none;-webkit-appearance:none;-moz-appearance:none;
+    padding-right:40px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23afafaf' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    background-size:14px;
+    cursor:pointer;
+  }
+  .field select option{background:var(--color-midnight-steel);color:var(--text-on-dark);white-space:normal;}
+  .form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+  .form-actions .btn{flex:1 1 200px;width:auto;justify-content:center;}
+  .form-note{font-size:var(--text-micro);color:var(--text-on-dark-dim);margin-top:14px;text-align:center;}
+  .form-success{
+    display:none;align-items:center;justify-content:center;gap:10px;
+    text-align:center;font-size:var(--text-body-sm);color:var(--text-on-dark);
+    padding:6px 0 2px;
+  }
+  .form-success.show{display:flex;}
+  .form-success svg{width:20px;height:20px;stroke:var(--accent);flex-shrink:0;}
+  .contact-form.sent .form-row,.contact-form.sent .form-actions{display:none;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:64px 0 28px;}
+  .footer-top{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px;}
+  .footer-brand .logo{margin-bottom:16px;}
+  .footer-brand p{color:var(--text-on-dark-dim);font-size:var(--text-body-sm);max-width:280px;font-weight:400;}
+  .footer-col h5{font-size:var(--text-caption);font-weight:400;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-on-dark-dim);margin-bottom:18px;}
+  .footer-col a,.footer-col div{display:block;font-size:var(--text-body-sm);color:var(--text-on-dark);margin-bottom:12px;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap;gap:14px;}
+  .footer-bottom p{font-size:var(--text-caption);color:var(--text-on-dark-dim);}
+  .footer-bottom a{color:var(--text-on-dark-dim);text-decoration:underline;text-underline-offset:2px;}
+  .footer-bottom a:hover{color:var(--text-on-dark);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1024px){
+    .contact .wrap{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-phone{display:none;}
+    .nav-right .btn-primary{display:none;}
+    .wrap{padding:0 20px;}
+    .logo{font-size:15px;}
+    main{padding-top:120px;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-top{grid-template-columns:1fr;gap:32px;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-nav{
+    position:fixed;inset:0;z-index:99;
+    background:rgba(0,0,0,0.97);
+    display:flex;flex-direction:column;
+    justify-content:center;align-items:center;gap:24px;
+    opacity:0;pointer-events:none;
+    transition:opacity .3s ease;
+  }
+  .mobile-nav.open{opacity:1;pointer-events:auto;}
+  .mobile-nav a{font-size:26px;font-weight:300;letter-spacing:-0.02em;color:var(--text-on-dark);}
+  .mobile-nav a.btn-primary{color:#000;}
+  .mobile-nav .btn{margin-top:16px;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">MO</span> M.O RESTAURI</a>
+    <nav class="primary-nav">
+      <a href="index.html#processo" data-i18n="nav.process">Come lavoriamo</a>
+      <a href="index.html#servizi" data-i18n="nav.services">Servizi edili</a>
+      <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <div class="nav-right">
+      <div class="nav-phone">
+        <span data-i18n="nav.call">Chiamaci</span>
+        <a href="tel:+393207579541">+39 320 757 9541</a>
+      </div>
+      <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a href="https://wa.me/393207579541?text=Ciao%2C%20vorrei%20richiedere%20un%20sopralluogo%20gratuito" target="_blank" rel="noopener" class="nav-whatsapp" data-i18n-aria-label="nav.whatsapp_aria" aria-label="Scrivici su WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+      </a>
+      <a href="#contatti" class="btn btn-primary">
+        <span data-i18n="nav.cta">Richiedi info</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      <button class="burger" id="burger" data-i18n-aria-label="nav.burger_aria" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#processo" data-i18n="nav.process">Come lavoriamo</a>
+  <a href="index.html#servizi" data-i18n="nav.services">Servizi edili</a>
+  <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+  <a href="#contatti" class="btn btn-primary" data-i18n="nav.cta_mobile">Richiesta sopralluogo</a>
+  <div class="lang-switch"><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+</div>
+
+<main>
+  <section class="contact" id="contatti">
+    <div class="wrap">
+      <div class="contact-info">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contatti</p>
+        <h2 data-i18n="contact.title">Vuoi trasformare la tua casa?</h2>
+        <p class="lead" data-i18n="contact.lead">Contattaci per un sopralluogo gratuito e un preventivo su misura per il tuo progetto a Firenze e provincia.</p>
+        <p class="about-note" data-i18n="contact.note">Un partner serio e affidabile: standard sempre alti e tecniche all'avanguardia, dal primo sopralluogo alla consegna delle chiavi.</p>
+
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.address">Sede</div><div>Via di Novoli 7, 50127 Firenze (FI)</div></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.phone">Telefono</div><a href="tel:+393207579541">+39 320 757 9541</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.whatsapp">WhatsApp</div><a href="https://wa.me/393207579541?text=Ciao%2C%20vorrei%20richiedere%20un%20sopralluogo%20gratuito" target="_blank" rel="noopener">+39 320 757 9541</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div class="txt"><div class="k" data-i18n="contact.label.email">Email</div><a href="mailto:restaurisrl@hotmail.com">restaurisrl@hotmail.com</a></div>
+        </div>
+
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=Via+di+Novoli+7,+50127+Firenze+FI&output=embed" width="100%" height="220" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-i18n-title="contact.map.title" title="Sede M.O Restauri su Google Maps"></iframe>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contattiForm">
+        <h3 data-i18n="form.title">Richiedi un sopralluogo gratuito</h3>
+        <p data-i18n="form.subtitle">Ti rispondiamo entro 48 ore con la prima disponibilità.</p>
+        <div class="form-row">
+          <div class="field full"><label for="cf-nome" data-i18n="form.name">Nome e cognome</label><input id="cf-nome" name="nome" type="text" autocomplete="name" data-i18n-placeholder="form.name.placeholder" placeholder="Mario Rossi" required></div>
+          <div class="field full"><label for="cf-tel" data-i18n="form.phone">Telefono</label><input id="cf-tel" name="tel" type="tel" autocomplete="tel" data-i18n-placeholder="form.phone.placeholder" placeholder="+39 3xx xxx xxxx" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="cf-email" data-i18n="form.email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" data-i18n-placeholder="form.email.placeholder" placeholder="tuamail@esempio.it" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="cf-servizio" data-i18n="form.service">Servizio richiesto</label>
+            <select id="cf-servizio" name="servizio">
+              <option data-i18n="form.service.opt1">Ristrutturazione chiavi in mano</option>
+              <option data-i18n="form.service.opt2">Nuova costruzione</option>
+              <option data-i18n="form.service.opt3">Manutenzione</option>
+              <option data-i18n="form.service.opt4">Impianti</option>
+              <option data-i18n="form.service.opt5">Finiture / Pavimenti / Cartongesso</option>
+              <option data-i18n="form.service.opt6">Altro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field full"><label for="cf-msg" data-i18n="form.message">Messaggio</label><textarea id="cf-msg" name="msg" data-i18n-placeholder="form.message.placeholder" placeholder="Raccontaci il tuo progetto..."></textarea></div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary" data-channel="whatsapp"><span data-i18n="form.submit.whatsapp">Invia su WhatsApp</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.9 7.9 0 003.85 1h.003a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.32-5.62zM12.05 18.4a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.48 6.58 6.58 0 01-6.69 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 01-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.34.1-.11.13-.2.2-.33.06-.13.03-.25-.02-.35-.05-.1-.45-1.09-.62-1.49-.16-.39-.33-.34-.45-.34-.11-.01-.25-.01-.38-.01-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.2.84.33 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.17-.46.17-.86.12-.94-.05-.09-.18-.14-.38-.24z"/></svg>
+          </button>
+          <button type="button" class="btn btn-ghost" data-channel="email"><span data-i18n="form.submit.email">Invia via email</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </button>
+        </div>
+        <p class="form-note"><span data-i18n="form.note.pre">Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra</span> <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a>.</p>
+        <p class="form-success" aria-live="polite">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span data-i18n="form.success">Si aprirà WhatsApp o il tuo programma di posta: invia il messaggio per completare la richiesta.</span>
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="mark">MO</span> M.O RESTAURI</a>
+        <p data-i18n="footer.about">Impresa edile a Firenze specializzata in costruzioni, ristrutturazioni e manutenzioni per privati e aziende.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.services.heading">Servizi</h5>
+        <a href="index.html#servizi" data-i18n="footer.services.1">Ristrutturazioni</a>
+        <a href="index.html#servizi" data-i18n="footer.services.2">Nuove costruzioni</a>
+        <a href="index.html#servizi" data-i18n="footer.services.3">Impianti</a>
+        <a href="index.html#servizi" data-i18n="footer.services.4">Pavimenti &amp; Parquet</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.company.heading">Azienda</h5>
+        <a href="index.html#processo" data-i18n="nav.process">Come lavoriamo</a>
+        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.contact.heading">Contatti</h5>
+        <div>Via di Novoli 7, Firenze</div>
+        <a href="tel:+393207579541">+39 320 757 9541</a>
+        <a href="mailto:restaurisrl@hotmail.com">restaurisrl@hotmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 M.O Restauri · Ovidiu Manole. <span data-i18n="footer.rights">Tutti i diritti riservati.</span> · <a href="privacy.html" data-i18n="form.note.link">Privacy Policy</a></p>
+      <p>P.IVA 07334540486 · Firenze, Italia</p>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+  initI18N();
+
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+  burger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+  function buildMailtoLink(form) {
+    const data = new FormData(form);
+    const get = (key) => (data.get(key) || '').toString().trim();
+    const nome = get('nome');
+    const subject = `Richiesta sopralluogo dal sito · ${nome || 'nuovo contatto'}`;
+    const body = [
+      `Nome: ${nome}`,
+      `Telefono: ${get('tel')}`,
+      `Email: ${get('email')}`,
+      `Servizio richiesto: ${get('servizio')}`,
+      '',
+      'Messaggio:',
+      get('msg')
+    ].join('\n');
+    return `mailto:restaurisrl@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function buildWhatsAppLink(form) {
+    const data = new FormData(form);
+    const get = (key) => (data.get(key) || '').toString().trim();
+    const lines = [
+      'Richiesta sopralluogo dal sito',
+      '',
+      `Nome: ${get('nome')}`,
+      `Telefono: ${get('tel')}`,
+      `Email: ${get('email')}`,
+      `Servizio richiesto: ${get('servizio')}`,
+      '',
+      'Messaggio:',
+      get('msg')
+    ].join('\n');
+    return `https://wa.me/393207579541?text=${encodeURIComponent(lines)}`;
+  }
+
+  function wireContactForm(form) {
+    form.querySelectorAll('[data-channel]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const channel = btn.getAttribute('data-channel');
+        if (channel === 'whatsapp') {
+          window.open(buildWhatsAppLink(form), '_blank', 'noopener');
+        } else {
+          window.location.href = buildMailtoLink(form);
+        }
+        form.classList.add('sent');
+        form.querySelector('.form-success').classList.add('show');
+      });
+    });
+  }
+
+  wireContactForm(document.getElementById('contattiForm'));
+</script>
+</body>
+</html>

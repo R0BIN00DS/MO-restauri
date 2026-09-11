@@ -40,9 +40,11 @@ const I18N = {
     'form.message': 'Messaggio',
     'form.message.placeholder': 'Raccontaci il tuo progetto...',
     'form.submit': 'Invia richiesta',
+    'form.submit.whatsapp': 'Invia su WhatsApp',
+    'form.submit.email': 'Invia via email',
     'form.note.pre': 'Ti risponderemo entro 48 ore. I tuoi dati sono trattati secondo la nostra',
     'form.note.link': 'Privacy Policy',
-    'form.success': "Si aprirà il tuo programma di posta: invia il messaggio per completare la richiesta.",
+    'form.success': "Si aprirà WhatsApp o il tuo programma di posta: invia il messaggio per completare la richiesta.",
 
     'process.title': 'Come lavoriamo',
     'process.subtitle': "Un percorso chiaro in quattro fasi, con un solo interlocutore dall'inizio alla fine.",
@@ -144,6 +146,7 @@ const I18N = {
     'contact.label.whatsapp': 'WhatsApp',
     'contact.label.email': 'Email',
     'contact.map.title': 'Sede M.O Restauri su Google Maps',
+    'contact.home.cta': 'Vai alla pagina Contatti',
 
     'footer.about': 'Impresa edile a Firenze specializzata in costruzioni, ristrutturazioni e manutenzioni per privati e aziende.',
     'footer.services.heading': 'Servizi',
@@ -194,9 +197,11 @@ const I18N = {
     'form.message': 'Message',
     'form.message.placeholder': 'Tell us about your project...',
     'form.submit': 'Send request',
+    'form.submit.whatsapp': 'Send via WhatsApp',
+    'form.submit.email': 'Send via email',
     'form.note.pre': "We'll reply within 48 hours. Your data is handled according to our",
     'form.note.link': 'Privacy Policy',
-    'form.success': "Your email app will open: send the message to complete your request.",
+    'form.success': "WhatsApp or your email app will open: send the message to complete your request.",
 
     'process.title': 'How we work',
     'process.subtitle': 'A clear four-step process, with a single point of contact from start to finish.',
@@ -298,6 +303,7 @@ const I18N = {
     'contact.label.whatsapp': 'WhatsApp',
     'contact.label.email': 'Email',
     'contact.map.title': "M.O Restauri's office on Google Maps",
+    'contact.home.cta': 'Go to the Contact page',
 
     'footer.about': 'Building contractor in Florence specializing in construction, renovation and maintenance for private clients and businesses.',
     'footer.services.heading': 'Services',
